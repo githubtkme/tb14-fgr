@@ -126,9 +126,9 @@
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
-      "jsonValue" : "{\"C300003F241C\":false,\"C30000448359\":true,\"C3000042FF65\":false,\"C3000028B8E8\":true,\"C3000044836A\":false,\"C30000448363\":false}",
+      "jsonValue" : "{\"C300003F241C\":false,\"C30000448359\":true,\"C3000042FF65\":false,\"C3000028B8E8\":false,\"C3000044836A\":false,\"C30000448363\":false}",
       "key" : "devices",
-      "lastUpdateTs" : 1762966772739,
+      "lastUpdateTs" : 1762967537506,
       "longValue" : null,
       "strValue" : null
     }, {

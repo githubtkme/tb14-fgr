@@ -647,7 +647,8 @@
         "layoutY" : 573
       },
       "configuration" : {
-        "ruleChainId" : "21cdfa70-63f1-11ef-90fa-3113fede6056"
+        "forwardMsgToDefaultRuleChain" : null,
+        "ruleChainId" : "fa399660-6d98-11f0-b5cd-673555e50245"
       },
       "configurationVersion" : 1,
       "createdTime" : 0,
@@ -1942,7 +1943,7 @@
     },
     "type" : "Uses",
     "typeGroup" : "COMMON",
-    "version" : 9755
+    "version" : 12565
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -1951,11 +1952,11 @@
     },
     "to" : {
       "entityType" : "RULE_CHAIN",
-      "id" : "21cdfa70-63f1-11ef-90fa-3113fede6056"
+      "id" : "fa399660-6d98-11f0-b5cd-673555e50245"
     },
     "type" : "Uses",
     "typeGroup" : "COMMON",
-    "version" : 9758
+    "version" : 12568
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -1968,7 +1969,7 @@
     },
     "type" : "Uses",
     "typeGroup" : "COMMON",
-    "version" : 9761
+    "version" : 12571
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]

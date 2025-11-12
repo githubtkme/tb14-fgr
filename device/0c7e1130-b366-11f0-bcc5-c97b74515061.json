@@ -75,8 +75,8 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "histeresisVA",
-      "lastUpdateTs" : 1762966851165,
-      "longValue" : 1762966849371,
+      "lastUpdateTs" : 1762967555538,
+      "longValue" : 1762967554717,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -91,8 +91,8 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1762966853621,
-      "longValue" : 1762966851107,
+      "lastUpdateTs" : 1762967555622,
+      "longValue" : 1762967555437,
       "strValue" : null
     }, {
       "booleanValue" : null,

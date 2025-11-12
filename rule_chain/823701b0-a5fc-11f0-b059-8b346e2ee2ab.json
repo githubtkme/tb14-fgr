@@ -165,10 +165,6 @@
       "toIndex" : 18,
       "type" : "False"
     }, {
-      "fromIndex" : 24,
-      "toIndex" : 25,
-      "type" : "True"
-    }, {
       "fromIndex" : 26,
       "toIndex" : 27,
       "type" : "Success"
@@ -866,7 +862,7 @@
       },
       "configuration" : {
         "forwardMsgToDefaultRuleChain" : false,
-        "ruleChainId" : "a4491b10-7250-11f0-9ba5-395e7a2b1ef2"
+        "ruleChainId" : "fa399660-6d98-11f0-b5cd-673555e50245"
       },
       "configurationVersion" : 1,
       "createdTime" : 0,
@@ -1008,7 +1004,7 @@
     },
     "type" : "Uses",
     "typeGroup" : "COMMON",
-    "version" : 8771
+    "version" : 12351
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -1017,11 +1013,11 @@
     },
     "to" : {
       "entityType" : "RULE_CHAIN",
-      "id" : "a4491b10-7250-11f0-9ba5-395e7a2b1ef2"
+      "id" : "fa399660-6d98-11f0-b5cd-673555e50245"
     },
     "type" : "Uses",
     "typeGroup" : "COMMON",
-    "version" : 8790
+    "version" : 12370
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -1034,7 +1030,7 @@
     },
     "type" : "Uses",
     "typeGroup" : "COMMON",
-    "version" : 8787
+    "version" : 12367
   }, {
     "additionalInfo" : null,
     "from" : {

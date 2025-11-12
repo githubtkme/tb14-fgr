@@ -128,7 +128,7 @@
       "doubleValue" : null,
       "jsonValue" : "{\"C300003F2451\":false,\"C30000448296\":false,\"C3000042FFFF\":false,\"C3000028B921\":false,\"C3000044829E\":false,\"C3000044829F\":false}",
       "key" : "devices",
-      "lastUpdateTs" : 1762966567044,
+      "lastUpdateTs" : 1762967541623,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -160,7 +160,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "state",
-      "lastUpdateTs" : 1762966567044,
+      "lastUpdateTs" : 1762967541623,
       "longValue" : null,
       "strValue" : "normal"
     } ]

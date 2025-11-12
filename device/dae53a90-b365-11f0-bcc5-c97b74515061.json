@@ -67,7 +67,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "alarmaHA",
-      "lastUpdateTs" : 1762966356799,
+      "lastUpdateTs" : 1762967135765,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -107,7 +107,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "histeresisHA",
-      "lastUpdateTs" : 1762966356157,
+      "lastUpdateTs" : 1762967135733,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -139,8 +139,8 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1762966793622,
-      "longValue" : 1762966790723,
+      "lastUpdateTs" : 1762967450623,
+      "longValue" : 1762967450074,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -163,7 +163,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "state",
-      "lastUpdateTs" : 1762966358339,
+      "lastUpdateTs" : 1762967137908,
       "longValue" : null,
       "strValue" : "normal"
     } ],

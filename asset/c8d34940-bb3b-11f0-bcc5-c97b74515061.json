@@ -105,7 +105,7 @@
       "doubleValue" : null,
       "jsonValue" : "{\"5bc7fde0-bb4b-11f0-bcc5-c97b74515061\":\"normal\",\"609deff0-bb4b-11f0-bcc5-c97b74515061\":\"normal\",\"51f532b0-bf2e-11f0-bcc5-c97b74515061\":\"normal\",\"5808add0-bf2e-11f0-bcc5-c97b74515061\":\"normal\"}",
       "key" : "modulos",
-      "lastUpdateTs" : 1762966567047,
+      "lastUpdateTs" : 1762967541628,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -113,7 +113,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "state",
-      "lastUpdateTs" : 1762966567047,
+      "lastUpdateTs" : 1762967541628,
       "longValue" : null,
       "strValue" : "normal"
     } ]
