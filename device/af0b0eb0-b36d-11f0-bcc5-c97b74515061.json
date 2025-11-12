@@ -1,0 +1,96 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : false,
+      "overwriteActivityTime" : false,
+      "description" : ""
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "b69f29f0-6d9e-11f0-b5cd-673555e50245"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "af0b0eb0-b36d-11f0-bcc5-c97b74515061"
+    },
+    "label" : "",
+    "name" : "Rio_Consulado_715_133_Antena",
+    "ownerId" : null,
+    "softwareId" : null,
+    "type" : "Dispositivos_S1S4"
+  },
+  "credentials" : {
+    "credentialsId" : "bebd21febd694dc1e820501fdc4e41713355c65e8986a825acab283917b6eace",
+    "credentialsType" : "MQTT_BASIC",
+    "credentialsValue" : "{\"clientId\":\"pkABVoWOif\",\"userName\":\"fgr_KkuOE\",\"password\":\"fgr_OFpjP\"}"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : true,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1762460054648,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1761599227331,
+      "longValue" : 1761599227331,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1762966880622,
+      "longValue" : 1762966879155,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastConnectTime",
+      "lastUpdateTs" : 1762951087208,
+      "longValue" : 1762951087208,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastDisconnectTime",
+      "lastUpdateTs" : 1762903000642,
+      "longValue" : 1762903000642,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"S1\":{\"TH\":[\"C300003F2451\"]},\"S4\":{\"Puerta\":[\"C30000448296\"],\"Liquidos\":[\"C3000042FFFF\"],\"Presencia\":[\"C3000028B921\"],\"Voltaje\":[\"C3000044829E\",\"C3000044829F\"]}}",
+      "key" : "macs",
+      "lastUpdateTs" : 1761594470794,
+      "longValue" : null,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  },
+  "calculatedFields" : [ ]
+}

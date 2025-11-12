@@ -1,0 +1,141 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : false,
+      "overwriteActivityTime" : false,
+      "description" : ""
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "266914b0-6e82-11f0-b66c-af0ec4b52e7b"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "7168b610-aea5-11f0-b059-8b346e2ee2ab"
+    },
+    "label" : "",
+    "name" : "Reforma_75_123_S1_TH_016",
+    "ownerId" : null,
+    "softwareId" : null,
+    "type" : "TemperaturaHumedad"
+  },
+  "credentials" : {
+    "credentialsId" : "4Ri113baOy5OB3dAxhC5",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "6b42c8a0-b04b-11f0-bcc5-c97b74515061"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "7168b610-aea5-11f0-b059-8b346e2ee2ab"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 12124
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : true,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1762438496621,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "histeresisClearHB",
+      "lastUpdateTs" : 1761072605179,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "histeresisClearTB",
+      "lastUpdateTs" : 1761072605180,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "histeresisHB",
+      "lastUpdateTs" : 1761072605179,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "histeresisTB",
+      "lastUpdateTs" : 1761072605180,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1762437613501,
+      "longValue" : 1762437613501,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1762966841620,
+      "longValue" : 1762966838728,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "latitude",
+      "lastUpdateTs" : 1761249655870,
+      "longValue" : null,
+      "strValue" : "0.47"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "longitude",
+      "lastUpdateTs" : 1761249663305,
+      "longValue" : null,
+      "strValue" : "0.5"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "state",
+      "lastUpdateTs" : 1761072606160,
+      "longValue" : null,
+      "strValue" : "normal"
+    } ],
+    "SHARED_SCOPE" : [ ]
+  },
+  "calculatedFields" : [ ]
+}

@@ -1,0 +1,484 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : null,
+    "debugMode" : false,
+    "externalId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "8ca01b50-a5fc-11f0-b059-8b346e2ee2ab"
+    },
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "8c8c1e20-a5fc-11f0-b059-8b346e2ee2ab"
+    },
+    "name" : "Envio de alarmas",
+    "root" : false,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 5,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 0,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 3,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 5,
+      "toIndex" : 6,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 7,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 8,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 9,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 7,
+      "toIndex" : 4,
+      "type" : "True"
+    }, {
+      "fromIndex" : 8,
+      "toIndex" : 1,
+      "type" : "True"
+    }, {
+      "fromIndex" : 9,
+      "toIndex" : 10,
+      "type" : "True"
+    } ],
+    "firstNodeIndex" : 2,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 525,
+        "layoutY" : 149
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "function replaceVariables(template, variables) {\n    var result = template;\n    for (var key in variables) {\n        if (variables.hasOwnProperty(key)) {\n            var placeholder = '{{' + key + '}}';\n            result = result.split(placeholder).join(variables[key]);\n        }\n    }\n    return result;\n}\n\nfunction timestampToReadableDate(timestamp) {\n    var offset = 6 * 60 * 60 * 1000;\n    var date = new Date(timestamp-offset);\n    \n    var year = date.getFullYear();\n    var month = ('0' + (date.getMonth() + 1)).slice(-2); // Los meses van de 0 a 11\n    var day = ('0' + date.getDate()).slice(-2);\n    \n    var hours = ('0' + date.getHours()).slice(-2);\n    var minutes = ('0' + date.getMinutes()).slice(-2);\n    var seconds = ('0' + date.getSeconds()).slice(-2);\n    \n    return year + \"-\" + month + \"-\" + day + \" \" + hours + \":\" + minutes + \":\" + seconds;\n}\n\nvar dispositivo = JSON.parse(metadata.dispositivo);\nvar notificaciones = JSON.parse(metadata.notificaciones);\nvar alarma = JSON.parse(metadata.alarma);\n\nvar tipoNoficicacionKey = (metadata.isNewAlarm === \"true\") ? \"new\" : \"clear\" ;\nvar tipoAlarma = (metadata.isNewAlarm === \"true\") ? \"🔔 NUEVA ALARMA 🔔\" : \"🔕 ALARMA RESTABLECIDA 🔕\" ;\nvar tipoDispositivo;\n\nvar tipoDispositivo = \"\";\nvar variables = {\n    \"typeDevice\": \"\",\n    \"direction\": \"\",\n    \"msgAlarm\": \"\",\n    \"site\": (dispositivo.sitios > 1) ? \" en \" + dispositivo.nombreSitio : \"\",\n    \"label\": \"(\" + dispositivo.label + \")\",\n    \"value\": \"\",\n    \"symbol\": \"\",\n    \"directionUmbral\": \"\",\n    \"umbral\": \"\",\n    \"startTime\": timestampToReadableDate(alarma.startTs)\n}\n\n//return {msg: [notificaciones, dispositivo], metadata: metadata, msgType: msgType};\n\nswitch (dispositivo.clave) {\n    case 'TA':\n    case 'TB':\n        //Dispositivos Ibeacon\n        if(metadata.deviceType === \"Dispositivos_S1S4\"){\n            dispositivo.umbralAlarma = dispositivo.notificacion.umbralSitio;\n            dispositivo.temperatura = dispositivo.temperature;\n        }\n        \n        tipoDispositivo = \"temp_hum\";\n        variables[\"typeDevice\"] = \"Temperatura\";\n        variables[\"direction\"] = (dispositivo.umbralAlarma === \"superior\") ? \"arriba\" : \"abajo\";\n        variables[\"value\"] = dispositivo.temperatura;\n        variables[\"symbol\"] = \"°C\";\n        variables[\"directionUmbral\"] = dispositivo.umbralAlarma;\n        variables[\"umbral\"] = dispositivo.umbrales.temperature[dispositivo.umbralAlarma];\n        break;\n    case 'HA':\n    case 'HB':\n        //Dispositivos Ibeacon\n        if(metadata.deviceType === \"Dispositivos_S1S4\"){\n            dispositivo.umbralAlarma = dispositivo.notificacion.umbralSitio;\n            dispositivo.humedad = dispositivo.humidity;\n        }\n        \n        tipoDispositivo = \"temp_hum\";\n        variables[\"typeDevice\"] = \"Humedad\";\n        variables[\"direction\"] = (dispositivo.umbralAlarma === \"superior\") ? \"arriba\" : \"abajo\";\n        variables[\"value\"] = dispositivo.humedad;\n        variables[\"symbol\"] = \"%HR\";\n        variables[\"directionUmbral\"] = dispositivo.umbralAlarma;\n        variables[\"umbral\"] = dispositivo.umbrales.humidity[dispositivo.umbralAlarma];\n        break;\n    case 'CE':\n        var value = [];\n        for(var key in dispositivo.voltaje){\n            value.push(dispositivo.voltaje[key]);\n        }\n        tipoDispositivo = \"corte_electrico\";\n        variables[\"typeDevice\"] = dispositivo.tipoDispositivo;\n        variables[\"msgAlarm\"] = dispositivo.alarma;\n        variables[\"value\"] = value.toString()\n        break;\n    case 'VA':\n    case 'VB':\n        var value = [];\n        for(var key in dispositivo.voltaje){\n            value.push(dispositivo.voltaje[key]);\n        }\n        tipoDispositivo = \"electrico\";\n        variables[\"typeDevice\"] = dispositivo.tipoDispositivo;\n        variables[\"msgAlarm\"] = dispositivo.alarma;\n        variables[\"value\"] = value.toString();\n        variables[\"directionUmbral\"] = dispositivo.umbralAlarma.replace(\"v_\", \"\");\n        variables[\"umbral\"] = dispositivo.umbrales[dispositivo.umbralAlarma];\n        break;\n    case 'CA':\n    case 'CB':\n        var value = [];\n        for(var key in dispositivo.corrientes){\n            value.push(dispositivo.corrientes[key]);\n        }\n        tipoDispositivo = \"electrico\";\n        variables[\"typeDevice\"] = dispositivo.tipoDispositivo;\n        variables[\"msgAlarm\"] = dispositivo.alarma;\n        variables[\"value\"] = value.toString();\n        variables[\"directionUmbral\"] = dispositivo.umbralAlarma.replace(\"c_\", \"\");\n        variables[\"umbral\"] = dispositivo.umbrales[dispositivo.umbralAlarma];\n        break;\n    case '%A':\n    case '%B':\n        var direction = (dispositivo.umbralAlarma === \"superior\") ? \"arriba\" : \"abajo\";\n        tipoDispositivo = \"electrico\";\n        variables[\"typeDevice\"] = dispositivo.tipoDispositivo;\n        variables[\"msgAlarm\"] = \"Porcentaje \" + direction + \" de rango\";\n        variables[\"value\"] = dispositivo.porcentaje;\n        variables[\"directionUmbral\"] = dispositivo.umbralAlarma;\n        variables[\"umbral\"] = dispositivo.umbrales[dispositivo.umbralAlarma];\n        break;\n    case 'PA':\n        tipoDispositivo = \"Boolean\";\n        variables[\"typeDevice\"] = dispositivo.dispositivo;\n        break;\n    case 'Bool':\n        tipoDispositivo = \"Boolean\";\n        variables[\"typeDevice\"] = dispositivo.mensaje;\n        break;\n    default:\n}\n\nvar tituloTemplate = notificaciones[tipoDispositivo][tipoNoficicacionKey].titulo;\nvar titulo = replaceVariables(tituloTemplate, variables);\nvariables[\"title\"] = titulo;\n\nif(tipoNoficicacionKey === \"clear\"){\n    variables[\"endTime\"] = timestampToReadableDate(alarma.clearTs);\n    variables[\"duration\"] = Math.round(((alarma.clearTs - alarma.startTs))/60000);\n}\nvar cuerpoTemplate = notificaciones[tipoDispositivo][tipoNoficicacionKey].cuerpo;\nvar cuerpo = replaceVariables(cuerpoTemplate, variables);\n\nvar newMSG = {\n    \"text\": tipoAlarma + \" \\n\\n \" + cuerpo,\n    \"subject\": tipoAlarma + \" \" + titulo,\n    \"body\": tipoAlarma + \" \\n\\n \" + cuerpo\n};\n\ndelete metadata.notificaciones;\ndelete metadata.alarma;\ndelete metadata.nivelAlarma;\ndelete metadata.nuevoDispositivo;\ndelete metadata.ss_macs;\ndelete metadata.fueraUmbral;\ndelete metadata.valido;\ndelete metadata.label;\ndelete metadata.isNewAlarm;\ndelete metadata.severity;\ndelete metadata.deviceId;\n\nreturn {msg: newMSG, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1759355175602,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8c9fcd30-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "generarMensaje",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1551,
+        "layoutY" : 104
+      },
+      "configuration" : {
+        "restEndpointUrlPattern" : "$[endPointTelegram]",
+        "requestMethod" : "POST",
+        "useSimpleClientHttpFactory" : false,
+        "parseToPlainText" : false,
+        "ignoreRequestBody" : false,
+        "enableProxy" : false,
+        "useSystemProxyProperties" : false,
+        "proxyScheme" : null,
+        "proxyHost" : null,
+        "proxyPort" : 0,
+        "proxyUser" : null,
+        "proxyPassword" : null,
+        "readTimeoutMs" : 0,
+        "maxParallelRequestsCount" : 0,
+        "headers" : {
+          "Content-Type" : "application/json"
+        },
+        "credentials" : {
+          "type" : "anonymous"
+        },
+        "maxInMemoryBufferSizeInKb" : 256
+      },
+      "configurationVersion" : 3,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8c9ff440-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "telegramAPI",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.rest.TbRestApiCallNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 276,
+        "layoutY" : 149
+      },
+      "configuration" : {
+        "dataToFetch" : "ATTRIBUTES",
+        "dataMapping" : {
+          "notificacionesGATEWAY" : "notificaciones"
+        },
+        "fetchTo" : "METADATA"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8ca01b50-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "notificacionesTenant",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetTenantAttributeNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1775,
+        "layoutY" : 211
+      },
+      "configuration" : {
+        "useSystemSmtpSettings" : true,
+        "smtpHost" : "localhost",
+        "smtpPort" : 25,
+        "username" : null,
+        "password" : null,
+        "smtpProtocol" : "smtp",
+        "timeout" : 10000,
+        "enableTls" : false,
+        "tlsVersion" : "TLSv1.2",
+        "enableProxy" : false,
+        "proxyHost" : null,
+        "proxyPort" : null,
+        "proxyUser" : null,
+        "proxyPassword" : null
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1754013343876,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8ca09080-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "eviarEmail",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.mail.TbSendEmailNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1526,
+        "layoutY" : 213
+      },
+      "configuration" : {
+        "fromTemplate" : "sender@tkmecloud.io",
+        "toTemplate" : "$[correos]",
+        "ccTemplate" : "",
+        "bccTemplate" : "",
+        "subjectTemplate" : "$[subject]",
+        "mailBodyType" : "false",
+        "bodyTemplate" : "$[body]"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1754013343876,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8ca105b0-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "enviarEmail",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.mail.TbMsgToEmailNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 776,
+        "layoutY" : 150
+      },
+      "configuration" : {
+        "dataToFetch" : "ATTRIBUTES",
+        "dataMapping" : {
+          "notificacionesDispositivos" : "notificacionesDispositivos",
+          "notificacionesConfiguracion" : "notificacionesConfiguracion",
+          "tokenAPI" : "tokenAPI"
+        },
+        "fetchTo" : "METADATA"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1754382334105,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8ca153d0-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "Dispositivos",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetTenantAttributeNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1026,
+        "layoutY" : 151
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var dispositivo = JSON.parse(metadata.dispositivo);\nvar deviceKey = (dispositivo.mac !== undefined) ? dispositivo.mac : dispositivo.token;\nvar canalesConfig = metadata.notificacionesConfiguracion ? JSON.parse(metadata.notificacionesConfiguracion) : {};\nvar mapaDispositivos = metadata.notificacionesDispositivos ? JSON.parse(metadata.notificacionesDispositivos) : {};\n\nvar sendEmail = false;\nvar sendTelegram = false;\nvar sendSMS = false;\nvar correos = '';\n\nif(!deviceKey || !mapaDispositivos[deviceKey]){\n    metadata.sendEmail = sendEmail;\n    metadata.sendTelegram = sendTelegram;\n    \n    return { msg: msg, metadata: metadata, msgType: msgType };\n}\n\nvar canalesDestino = mapaDispositivos[deviceKey].split(\",\");\nvar correosUnificados = [];\n\ncanalesDestino.forEach(function (canal) {\n    canal = canal.trim();\n\n    if (canal === \"T\") {\n        sendTelegram = true;\n    } else if (!isNaN(canal)) {\n        var index = parseInt(canal);\n        if (canalesConfig.email && Array.isArray(canalesConfig.email.correos) && canalesConfig.email.correos[index]) {\n            correosUnificados.push(canalesConfig.email.correos[index]);\n        }\n    }\n});\n\nif(correosUnificados.length > 0){\n    sendEmail = true;\n    correos = correosUnificados.toString();\n}\n\nif(canalesConfig.sms !== undefined){\n    msg[\"phones\"] = canalesConfig.sms;\n    sendSMS = true;\n}\n\nmetadata.sendEmail = sendEmail;\nmetadata.sendTelegram = sendTelegram;\nmetadata.sendSMS = sendSMS;\n\nmsg[\"endPointTelegram\"] = canalesConfig.telegram.endPoint;\nmsg[\"chat_id\"] = canalesConfig.telegram.id_telegram;\nmsg[\"correos\"] = correos;\n\ndelete metadata.notificacionesDispositivos;\ndelete metadata.notificacionesConfiguracion;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1759343228354,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8ca153d1-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "definirSiSeEnviaAlarma",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1300,
+        "layoutY" : 212
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return metadata.sendEmail === \"true\";",
+        "tbelScript" : "return msg.temperature > 20;"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1754382334105,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8ca17ae0-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "envioEmail",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1301,
+        "layoutY" : 104
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return metadata.sendTelegram === \"true\";",
+        "tbelScript" : "return msg.temperature > 20;"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1754382334105,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8ca1a1f0-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "envioTelegram",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1301,
+        "layoutY" : 296
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return metadata.sendSMS === \"true\";",
+        "tbelScript" : "return msg.temperature > 20;"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8ca1a1f1-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "envioSMS",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1525,
+        "layoutY" : 296
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "msg = {\n    \"tokenAPI\": metadata.tokenAPI,\n    \"message\": msg.text,\n    \"phones\": msg.phones\n}\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1756149720048,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8ca1c900-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "ApiSMS",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1776,
+        "layoutY" : 298
+      },
+      "configuration" : {
+        "restEndpointUrlPattern" : "${urlAPI}/api/sendSmsLabsMobile",
+        "requestMethod" : "POST",
+        "useSimpleClientHttpFactory" : false,
+        "parseToPlainText" : false,
+        "ignoreRequestBody" : false,
+        "enableProxy" : false,
+        "useSystemProxyProperties" : false,
+        "proxyScheme" : null,
+        "proxyHost" : null,
+        "proxyPort" : 0,
+        "proxyUser" : null,
+        "proxyPassword" : null,
+        "readTimeoutMs" : 0,
+        "maxParallelRequestsCount" : 0,
+        "headers" : {
+          "Content-Type" : "application/json",
+          "Accept" : "application/json"
+        },
+        "credentials" : {
+          "type" : "anonymous"
+        },
+        "maxInMemoryBufferSizeInKb" : 256
+      },
+      "configurationVersion" : 3,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8ca1f010-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "APISMS",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.rest.TbRestApiCallNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "823701b0-a5fc-11f0-b059-8b346e2ee2ab"
+    },
+    "to" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "8c8c1e20-a5fc-11f0-b059-8b346e2ee2ab"
+    },
+    "type" : "Uses",
+    "typeGroup" : "COMMON",
+    "version" : 8771
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "6e790b50-a601-11f0-b059-8b346e2ee2ab"
+    },
+    "to" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "8c8c1e20-a5fc-11f0-b059-8b346e2ee2ab"
+    },
+    "type" : "Uses",
+    "typeGroup" : "COMMON",
+    "version" : 9755
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

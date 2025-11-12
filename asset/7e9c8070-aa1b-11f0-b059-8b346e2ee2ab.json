@@ -1,0 +1,169 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "assetProfileId" : {
+      "entityType" : "ASSET_PROFILE",
+      "id" : "fa6931e0-6d98-11f0-b5cd-673555e50245"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "7e9c8070-aa1b-11f0-b059-8b346e2ee2ab"
+    },
+    "label" : null,
+    "name" : "MDF_268",
+    "ownerId" : null,
+    "type" : "default"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "6b5dbe70-aa1b-11f0-b059-8b346e2ee2ab"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "7e9c8070-aa1b-11f0-b059-8b346e2ee2ab"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 11549
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "7e9c8070-aa1b-11f0-b059-8b346e2ee2ab"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "aee1f180-aa1a-11f0-b059-8b346e2ee2ab"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 11552
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "7e9c8070-aa1b-11f0-b059-8b346e2ee2ab"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "be8ae290-aa1a-11f0-b059-8b346e2ee2ab"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 11554
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "7e9c8070-aa1b-11f0-b059-8b346e2ee2ab"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "c6dbca90-aa1a-11f0-b059-8b346e2ee2ab"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 11550
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "7e9c8070-aa1b-11f0-b059-8b346e2ee2ab"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "d15251b0-aa1a-11f0-b059-8b346e2ee2ab"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 11551
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "7e9c8070-aa1b-11f0-b059-8b346e2ee2ab"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "da0074e0-aa1a-11f0-b059-8b346e2ee2ab"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 11553
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "7e9c8070-aa1b-11f0-b059-8b346e2ee2ab"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "e54150e0-aa1a-11f0-b059-8b346e2ee2ab"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 11555
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "[\"P1\"]",
+      "key" : "contains",
+      "lastUpdateTs" : 1760571180988,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"C300003F241F\":false,\"C30000448365\":false,\"C3000042FF63\":false,\"C3000028BA6C\":false,\"C3000044835D\":false,\"C3000044835C\":false}",
+      "key" : "devices",
+      "lastUpdateTs" : 1762818631194,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "latitude",
+      "lastUpdateTs" : 1760571000943,
+      "longValue" : null,
+      "strValue" : "0.38"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "longitude",
+      "lastUpdateTs" : 1760571009449,
+      "longValue" : null,
+      "strValue" : "0.79"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "map",
+      "lastUpdateTs" : 1760570987815,
+      "longValue" : null,
+      "strValue" : "/api/images/tenant/ChatGPT Image 7 oct 2025, 01_55_46 p.m.png"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "state",
+      "lastUpdateTs" : 1762818631194,
+      "longValue" : null,
+      "strValue" : "normal"
+    } ]
+  },
+  "calculatedFields" : [ ]
+}

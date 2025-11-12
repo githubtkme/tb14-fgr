@@ -1,0 +1,1343 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : null,
+    "debugMode" : false,
+    "externalId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "62bb8541-a601-11f0-b059-8b346e2ee2ab"
+    },
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "6297d0a0-a601-11f0-b059-8b346e2ee2ab"
+    },
+    "name" : "Procesamiento y almacenaje de datos dispositivos_GATEWAY_V2",
+    "root" : false,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 12,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 37,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 3,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 4,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 5,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 5,
+      "toIndex" : 6,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 0,
+      "type" : "True"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 7,
+      "type" : "False"
+    }, {
+      "fromIndex" : 10,
+      "toIndex" : 11,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 11,
+      "toIndex" : 35,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 12,
+      "toIndex" : 13,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 13,
+      "toIndex" : 14,
+      "type" : "False"
+    }, {
+      "fromIndex" : 13,
+      "toIndex" : 38,
+      "type" : "True"
+    }, {
+      "fromIndex" : 15,
+      "toIndex" : 16,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 16,
+      "toIndex" : 19,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 17,
+      "toIndex" : 18,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 18,
+      "toIndex" : 20,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 19,
+      "toIndex" : 17,
+      "type" : "True"
+    }, {
+      "fromIndex" : 19,
+      "toIndex" : 26,
+      "type" : "False"
+    }, {
+      "fromIndex" : 20,
+      "toIndex" : 21,
+      "type" : "True"
+    }, {
+      "fromIndex" : 20,
+      "toIndex" : 22,
+      "type" : "False"
+    }, {
+      "fromIndex" : 22,
+      "toIndex" : 23,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 23,
+      "toIndex" : 24,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 24,
+      "toIndex" : 10,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 24,
+      "toIndex" : 25,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 26,
+      "toIndex" : 8,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 26,
+      "toIndex" : 33,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 27,
+      "toIndex" : 28,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 28,
+      "toIndex" : 29,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 29,
+      "toIndex" : 30,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 30,
+      "toIndex" : 31,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 31,
+      "toIndex" : 32,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 32,
+      "toIndex" : 10,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 33,
+      "toIndex" : 27,
+      "type" : "True"
+    }, {
+      "fromIndex" : 33,
+      "toIndex" : 34,
+      "type" : "False"
+    }, {
+      "fromIndex" : 34,
+      "toIndex" : 31,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 35,
+      "toIndex" : 36,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 36,
+      "toIndex" : 9,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 37,
+      "toIndex" : 15,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 38,
+      "toIndex" : 1,
+      "type" : "False"
+    }, {
+      "fromIndex" : 38,
+      "toIndex" : 39,
+      "type" : "True"
+    }, {
+      "fromIndex" : 39,
+      "toIndex" : 37,
+      "type" : "Success"
+    } ],
+    "firstNodeIndex" : 2,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1502,
+        "layoutY" : 149
+      },
+      "configuration" : {
+        "dataToFetch" : "ATTRIBUTES",
+        "dataMapping" : {
+          "acondicionamientoGATEWAY" : "acondicionamientoGATEWAY",
+          "datosRequeridosGATEWAY" : "datosRequeridosGATEWAY",
+          "adicionGATEWAY" : "adicionGATEWAY"
+        },
+        "fetchTo" : "METADATA"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1749746739038,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62bb5e30-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "getProcesamiento",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetTenantAttributeNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2475,
+        "layoutY" : 150
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var nameDevive = metadata.deviceName.split(\"-\");\nvar procesamiento = (metadata.acondicionamientoGATEWAY !== undefined) ? JSON.parse(metadata.acondicionamientoGATEWAY) : {};\n\nfunction procesarMediciones(mediciones, operaciones) {\n    var resultado = {};\n\n    for (var clave in mediciones) {\n        if (operaciones[clave]) {\n            try {\n                var valor = mediciones[clave];\n                \n                // Verificar qué operación realizar\n                if (operaciones[clave] === \"truncate\") {\n                    // Truncar a 2 decimales\n                    resultado[clave] = Math.floor(valor * 100) / 100;\n                } else if (operaciones[clave] === \"round\") {\n                    // Redondear a 2 decimales\n                    resultado[clave] = Math.round(valor * 100) / 100;\n                } else {\n                    // Si no es ninguna de las operaciones anteriores, aplicar operación matemática\n                    resultado[clave] = eval(valor + operaciones[clave]);\n                }\n                \n                // Se usa eval() para evaluar la operación sobre el valor\n                //resultado[clave] = eval(mediciones[clave] + operaciones[clave]);\n            } catch (error) {\n                resultado[clave] = mediciones[clave]; // En caso de error, mantener el valor original\n            }\n        } else {\n            resultado[clave] = mediciones[clave]; // Si no hay operación, dejar el valor igual\n        }\n    }\n    \n    return resultado;\n}\n\nif(procesamiento[nameDevive[0]] !== undefined){\n    msg = procesarMediciones(msg, procesamiento[nameDevive[0]])\n}\n\ndelete metadata.acondicionamientoGATEWAY;\ndelete metadata.datosRequeridosGATEWAY;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1756507485950,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62bb8540-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "acondicionarDatos",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 275,
+        "layoutY" : 150
+      },
+      "configuration" : {
+        "fetchTo" : "METADATA"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62bb8541-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "obtenerTokenDispositivo",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbFetchDeviceCredentialsNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 525,
+        "layoutY" : 151
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "metadata.token = metadata.credentials;\n\ndelete metadata.credentials;\ndelete metadata.credentialsType;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62bbac50-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "apendizarToken",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 774,
+        "layoutY" : 150
+      },
+      "configuration" : {
+        "dataToFetch" : "ATTRIBUTES",
+        "dataMapping" : {
+          "dispositivosGATEWAY" : "dispositivos",
+          "sitios" : "sitios",
+          "numSitios" : "numSitios"
+        },
+        "fetchTo" : "METADATA"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62bbac51-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "sitiosDispositivosTenant",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetTenantAttributeNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1026,
+        "layoutY" : 150
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "function validarSiExisteDispositivo(token, dispositivos){\n    dispositivos = dispositivos[\"GATEWAY\"];\n\n    for (var key in dispositivos) {\n        if (dispositivos.hasOwnProperty(key)) {\n            var items = dispositivos[key];\n\n            if (Array.isArray(items)) {\n                for (var i = 0; i < items.length; i++) {\n                    if (items[i] === token) {\n                        var data = {\n                            dispositivo: \"GATEWAY\",\n                            tipoDispositivo: key,\n                            posicion: i,\n                            token: token\n                        };\n                        \n                        return data;\n                    }\n                }\n            } else {\n                for (var subKey in items) {\n                    if (items.hasOwnProperty(subKey)) {\n                        var subItems = items[subKey];\n                        for (var j = 0; j < subItems.length; j++) {\n                            if (subItems[j] === token) {\n                                var data = {\n                                    dispositivo: \"GATEWAY\",\n                                    tipoDispositivo: key,\n                                    posicion: j,\n                                    subTipo: subKey,\n                                    token: token\n                                };\n                                \n                                return data;\n                            }\n                        }\n                    }\n                }\n            }\n        }\n    }\n    \n    \n    return false;\n}\n\nfunction buscarDispositivoSitio(token, sitios){\n    if(sitios[token] !== undefined){\n        return sitios[token];\n    }\n\n    return false;\n}\n\nvar config = JSON.parse(metadata.dispositivos);\nvar sitios = JSON.parse(metadata.sitios);\n\nvar dispositivo = validarSiExisteDispositivo(metadata.token, config);\nif(!dispositivo){\n    var newMetadata = {\n        'deviceType': metadata.deviceType,\n        'deviceName': metadata.deviceName,\n        'ts': metadata.ts\n    };\n    \n    var newMSG = {\n        'error_nodo': \"NoExisteDispositivoEnDispositivos\",\n        'error_msg' : msg,\n        'error_metadata' : newMetadata\n    };\n    \n    return {msg: newMSG, metadata: newMetadata, msgType: msgType};\n}\n\ndispositivo[\"sitios\"] = parseInt(metadata.numSitios);\n\nvar informacionSitio = buscarDispositivoSitio(dispositivo.token, sitios);\nif(!informacionSitio){\n    var newMetadata = {\n        'deviceType': metadata.deviceType,\n        'deviceName': metadata.deviceName,\n        'ts': metadata.ts\n    };\n    \n    var newMSG = {\n        'error_nodo': \"NoExisteDispositivoEnSitio\",\n        'error_msg' : msg,\n        'error_metadata' : newMetadata\n    };\n    \n    return {msg: newMSG, metadata: newMetadata, msgType: msgType};\n}\n\ndispositivo[\"nombreSitio\"] = informacionSitio;\n\nmetadata.dispositivo = JSON.stringify(dispositivo);\n\ndelete metadata.token;\ndelete metadata.dispositivos;\ndelete metadata.sitios;\ndelete metadata.numSitios;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1756436453538,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62bbd360-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "validarSiElDispositivoExisteEnLosObjetosDeConfiguracion",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1275,
+        "layoutY" : 150
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return (msg.error_nodo === undefined);",
+        "tbelScript" : "return msg.temperature > 20;"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62bbd361-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "dispositivoValido",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1500,
+        "layoutY" : 24
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "useServerTs" : false,
+        "processingSettings" : {
+          "type" : "ON_EVERY_MESSAGE"
+        }
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62bbfa70-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "ContabilizarDatosInvalido",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 4006,
+        "layoutY" : 303
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "useServerTs" : false,
+        "processingSettings" : {
+          "type" : "ON_EVERY_MESSAGE"
+        }
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62bc2180-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "saveTimeseries",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 6729,
+        "layoutY" : 102
+      },
+      "configuration" : {
+        "forwardMsgToDefaultRuleChain" : false,
+        "ruleChainId" : "6e790b50-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62bc2181-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "Generación de alarmas dispositivos_GATEWAY",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 5728,
+        "layoutY" : 103
+      },
+      "configuration" : {
+        "dataMapping" : {
+          "label" : "label"
+        },
+        "ignoreNullStrings" : false,
+        "fetchTo" : "METADATA"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62bc4890-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "agregarEtiqueta",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetOriginatorFieldsNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 5978,
+        "layoutY" : 103
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var dispositivo = JSON.parse(metadata.dispositivo);\n\ndispositivo.label = metadata.label;\nmetadata.dispositivo = JSON.stringify(dispositivo);\n\ndelete metadata.label;\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1756831863639,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62bc6fa0-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "agregarEtiqueta",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1752,
+        "layoutY" : 150
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var datosRequeridos = (metadata.datosRequeridosGATEWAY !== undefined) ? JSON.parse(metadata.datosRequeridosGATEWAY) : {};\nvar nameDevive = metadata.deviceName.split(\"-\");\n\nvar band = true;\n\nif(datosRequeridos[nameDevive[0]] !== undefined){\n    datosRequeridos = datosRequeridos[nameDevive[0]];\n    for(var i = 0; i < datosRequeridos.length; i++){\n        if(msg[datosRequeridos[i]] === undefined){\n            band = false;\n        }\n    }\n}\n\nif(!band){\n    var newMetadata = {\n        'deviceType': metadata.deviceType,\n        'deviceName': metadata.deviceName,\n        'ts': metadata.ts\n    };\n    \n    var newMSG = {\n        'error_nodo': \"datosRequeridos\",\n        'error_msg' : msg,\n        'error_metadata' : newMetadata\n    };\n    \n    return {msg: newMSG, metadata: newMetadata, msgType: msgType};\n}\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1756436508141,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62bc96b0-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "datosRequeridos",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2002,
+        "layoutY" : 150
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return (msg.error_nodo === undefined);",
+        "tbelScript" : "return msg.temperature > 20;"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1754594895554,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62bc96b1-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "dispositivoValido",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2234,
+        "layoutY" : 9
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "useServerTs" : false,
+        "processingSettings" : {
+          "type" : "ON_EVERY_MESSAGE"
+        }
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62bcbdc0-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "ContabilizarDatosInvalido",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2981,
+        "layoutY" : 152
+      },
+      "configuration" : {
+        "dataToFetch" : "ATTRIBUTES",
+        "dataMapping" : {
+          "dividirDispositivoGATEWAY" : "dividirDispositivoGATEWAY",
+          "guardarNuevoDispositivoGATEWAY" : "guardarNuevoDispositivoGATEWAY"
+        },
+        "fetchTo" : "METADATA"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62bce4d0-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "atributosParaDivisiónDispositivos",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetTenantAttributeNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 3230,
+        "layoutY" : 153
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var dividirDispositivoGATEWAY = (metadata.dividirDispositivoGATEWAY !== undefined) ? JSON.parse(metadata.dividirDispositivoGATEWAY) : {};\nvar guardarNuevoDispositivoGATEWAY = (metadata.guardarNuevoDispositivoGATEWAY !== undefined) ? JSON.parse(metadata.guardarNuevoDispositivoGATEWAY) : {};\nvar dispositivo = JSON.parse(metadata.dispositivo);\nvar nameDevive = metadata.deviceName.split(\"-\");\n\nvar newDispositivos;\nvar newMSG = [];\nif(dividirDispositivoGATEWAY[nameDevive[0]]){\n    newDispositivos = dividirDispositivoGATEWAY[nameDevive[0]];\n    \n    for (var key in newDispositivos) {\n        \n        var newObj = {};\n        newObj[\"key\"] = key;\n        newObj[\"data\"] = {};\n        for (var i = 0; i < newDispositivos[key].length; i++) {\n            newObj[\"data\"][newDispositivos[key][i]] = msg[newDispositivos[key][i]];\n            delete msg[newDispositivos[key][i]];\n        }\n        \n        newMSG.push(newObj);\n    }\n}\n\nvar orig = {};\norig[\"key\"] = \"extra\";\norig[\"data\"] = msg;\nnewMSG.push(orig);\nmetadata.guardar = (guardarNuevoDispositivoGATEWAY[nameDevive[0]] !== undefined) ? guardarNuevoDispositivoGATEWAY[nameDevive[0]] : false;\n\ndelete metadata.dividirDispositivoGATEWAY;\ndelete metadata.guardarNuevoDispositivoGATEWAY;\n\nreturn {msg: newMSG, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1757368808429,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62bce4d1-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "dividirGuardarDispositivos",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 3756,
+        "layoutY" : 78
+      },
+      "configuration" : {
+        "version" : 0
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1756751443483,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62bd0be0-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "split",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbSplitArrayMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 4006,
+        "layoutY" : 78
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var newName = msg.key + \"-\" + metadata.deviceName;\nmsg = msg.data;\nmetadata.deviceName = newName;\ndelete metadata.guardar;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1756765040673,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62bd0be1-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "newDeviceName",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 3481,
+        "layoutY" : 152
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return metadata.guardar === \"true\";",
+        "tbelScript" : "return msg.temperature > 20;"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62bd32f0-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "guardarDispositivoDividido",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 4255,
+        "layoutY" : 78
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return /extra/.test(metadata.deviceName);",
+        "tbelScript" : "return msg.temperature > 20;"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1756766120607,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62bd5a00-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "esDispositivoExtra",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 4505,
+        "layoutY" : 129
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "useServerTs" : false,
+        "processingSettings" : {
+          "type" : "ON_EVERY_MESSAGE"
+        }
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62bd5a01-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "saveTimeseries",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 4506,
+        "layoutY" : 34
+      },
+      "configuration" : {
+        "originatorSource" : "ENTITY",
+        "preserveOriginatorIfCustomer" : false,
+        "entityType" : "DEVICE",
+        "entityNamePattern" : "${deviceName}",
+        "relationsQuery" : {
+          "direction" : "FROM",
+          "maxLevel" : 1,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ ],
+            "negate" : false
+          } ],
+          "fetchLastLevelOnly" : false
+        }
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62bd8110-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "newDevice",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 4756,
+        "layoutY" : 36
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : false,
+        "fetchTo" : "METADATA",
+        "clientAttributeNames" : [ ],
+        "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ "renombrarVariables" ],
+        "latestTsKeyNames" : [ ],
+        "getLatestValueWithTs" : false
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62bd8111-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "atributosNuevoDispositivo",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 5005,
+        "layoutY" : 36
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var renombrarVariables = (metadata.ss_renombrarVariables !== undefined) ? JSON.parse(metadata.ss_renombrarVariables) : {};\n\nfor (var key in renombrarVariables) {\n    var value = msg[key];\n    msg[renombrarVariables[key]] = value;\n    delete msg[key];\n}\n\ndelete metadata.ss_renombrarVariables;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1756767590176,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62bda820-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "renombrarVariables",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 5203,
+        "layoutY" : 115
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "useServerTs" : false,
+        "processingSettings" : {
+          "type" : "ON_EVERY_MESSAGE"
+        }
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62bda821-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "saveTimeseries",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 3754,
+        "layoutY" : 204
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var newArrMSG = [];\nvar newMSG = {};\n\nfor (var i = 0; i < msg.length; i++) {\n    \n    if(msg[i][\"key\"] !== \"extra\"){\n        newArrMSG.push(msg[i]);    \n    }\n    \n    for (var key in msg[i][\"data\"]) {\n        newMSG[key] = msg[i][\"data\"][key];\n    }\n}\n\nmetadata.newArrDevices = JSON.stringify(newArrMSG);\nmetadata.devices = newArrMSG.length;\ndelete metadata.guardar;\n\nreturn {msg: newMSG, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62bdcf30-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "unirDataParaGuardar",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 4256,
+        "layoutY" : 203
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var newMSG = JSON.parse(metadata.newArrDevices);\n\ndelete metadata.devices;\ndelete metadata.newArrDevices;\n\nreturn {msg: newMSG, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62bdcf31-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "arrayDeDispositivos",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 4505,
+        "layoutY" : 203
+      },
+      "configuration" : {
+        "version" : 0
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62bdf640-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "split",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbSplitArrayMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 4755,
+        "layoutY" : 202
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var newName = msg.key + \"-\" + metadata.deviceName;\nmsg = msg.data;\nmetadata.deviceName = newName;\ndelete metadata.guardar;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62bdf641-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "newDeviceName",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 5005,
+        "layoutY" : 203
+      },
+      "configuration" : {
+        "originatorSource" : "ENTITY",
+        "preserveOriginatorIfCustomer" : false,
+        "entityType" : "DEVICE",
+        "entityNamePattern" : "${deviceName}",
+        "relationsQuery" : {
+          "direction" : "FROM",
+          "maxLevel" : 1,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ ],
+            "negate" : false
+          } ],
+          "fetchLastLevelOnly" : false
+        }
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62be1d50-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "newDevice",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 5256,
+        "layoutY" : 203
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : false,
+        "fetchTo" : "METADATA",
+        "clientAttributeNames" : [ ],
+        "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ "renombrarVariables" ],
+        "latestTsKeyNames" : [ ],
+        "getLatestValueWithTs" : false
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1756828363773,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62be1d51-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "atributosNuevoDispositivo",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 5506,
+        "layoutY" : 203
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var renombrarVariables = (metadata.ss_renombrarVariables !== undefined) ? JSON.parse(metadata.ss_renombrarVariables) : {};\n\nfor (var key in renombrarVariables) {\n    var value = msg[key];\n    msg[renombrarVariables[key]] = value;\n    delete msg[key];\n}\n\ndelete metadata.ss_renombrarVariables;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1756828156344,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62be4460-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "renombrarVariables",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 4006,
+        "layoutY" : 203
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return metadata.devices > 0;",
+        "tbelScript" : "return msg.temperature > 20;"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62be4461-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "seDivideEnDispositivos",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 4643,
+        "layoutY" : 305
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "\ndelete metadata.newArrDevices;\ndelete metadata.devices;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1756828397469,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62be6b70-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "eliminarDatosNoNecesarios",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 6229,
+        "layoutY" : 103
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : false,
+        "fetchTo" : "METADATA",
+        "clientAttributeNames" : [ ],
+        "latestTsKeyNames" : [ ],
+        "serverAttributeNames" : [ "umbrales", "histeresis" ],
+        "sharedAttributeNames" : [ ],
+        "getLatestValueWithTs" : false
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62be6b71-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "datosExclusivos",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 6478,
+        "layoutY" : 104
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var dispositivo = JSON.parse(metadata.dispositivo);\n\nif(metadata.ss_histeresis !== undefined){\n    dispositivo.histeresis = JSON.parse(metadata.ss_histeresis);\n}\n\nif(metadata.ss_umbrales !== undefined){\n    dispositivo.umbrales = JSON.parse(metadata.ss_umbrales);\n}\n\nmetadata.dispositivo = JSON.stringify(dispositivo);\n\ndelete metadata.ss_histeresis;\ndelete metadata.ss_umbrales;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1756835102377,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62be9280-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "agregarDatosExclusivos",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2729,
+        "layoutY" : 151
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var nameDevive = metadata.deviceName.split(\"-\");\nvar adicion = (metadata.adicionGATEWAY !== undefined) ? JSON.parse(metadata.adicionGATEWAY) : {};\n\nfunction M(k) {\n  var v = msg[k];\n  if (v === undefined || v === null || v === '') return 0;\n  var n = Number(v);\n  return isNaN(n) ? 0 : n;\n}\n\nfunction wrapMsgAccess(expr) {\n  var s = String(expr);\n  s = s.replace(/msg\\[['\"]([^'\"]+)['\"]\\]/g, \"M('$1')\");\n  s = s.replace(/msg\\.([a-zA-Z0-9_]+)/g, \"M('$1')\");\n  return s;\n}\n\nfunction adicionDatos(mediciones, adicionDatos) {\n    var resultado = msg;\n    \n    for(var key in adicionDatos){\n        var validarOperacion = wrapMsgAccess(adicionDatos[key]);\n        resultado[key] = eval(validarOperacion);\n    }\n    \n    return resultado;\n}\n\nif(adicion[nameDevive[0]] !== undefined){\n    msg = adicionDatos(msg, adicion[nameDevive[0]])\n}\n\ndelete metadata.adicionGATEWAY;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1757184231168,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62be9281-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "adicionarDatos",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2225,
+        "layoutY" : 150
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var dispositivo = JSON.parse(metadata.dispositivo);\nreturn (dispositivo.tipoDispositivo === \"ADC\" || dispositivo.tipoDispositivo === \"Diesel\");",
+        "tbelScript" : "return msg.temperature > 20;"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62beb990-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "dispositivoADC",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2475,
+        "layoutY" : 250
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "function obtenerPorcentaje(sensorValor) {\n    var calibracion = [\n        [79, 0],\n        [6883, 25],\n        [15018, 50],\n        [23204, 75],\n        [30000, 100]\n    ];\n\n    for (var i = 0; i < calibracion.length - 1; i++) {\n        var x0 = calibracion[i][0];\n        var y0 = calibracion[i][1];\n        var x1 = calibracion[i + 1][0];\n        var y1 = calibracion[i + 1][1];\n\n        if (sensorValor >= x0 && sensorValor <= x1) {\n            var porcentaje = y0 + ((sensorValor - x0) / (x1 - x0)) * (y1 - y0);\n            return Math.round(porcentaje * 100) / 100; // Redondea a 2 decimales\n        }\n    }\n\n    // Fuera de rango\n    if (sensorValor < calibracion[0][0]) {\n        return 0.0;\n    } else if (sensorValor > calibracion[calibracion.length - 1][0]) {\n        return 100.0;\n    }\n}\n\nmsg = {\n    \"valor\": msg.pv,\n    \"porcentaje\": obtenerPorcentaje(msg.pv)\n}\n\ndelete metadata.acondicionamientoGATEWAY;\ndelete metadata.datosRequeridosGATEWAY;\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "62beb991-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "Formula%ADC",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "6297d0a0-a601-11f0-b059-8b346e2ee2ab"
+    },
+    "to" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "6e790b50-a601-11f0-b059-8b346e2ee2ab"
+    },
+    "type" : "Uses",
+    "typeGroup" : "COMMON",
+    "version" : 9156
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

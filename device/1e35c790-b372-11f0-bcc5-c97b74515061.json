@@ -1,0 +1,96 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : false,
+      "overwriteActivityTime" : false,
+      "description" : ""
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "b69f29f0-6d9e-11f0-b5cd-673555e50245"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "1e35c790-b372-11f0-bcc5-c97b74515061"
+    },
+    "label" : "",
+    "name" : "Sitio_58_Antena",
+    "ownerId" : null,
+    "softwareId" : null,
+    "type" : "Dispositivos_S1S4"
+  },
+  "credentials" : {
+    "credentialsId" : "a3f53f0b09827db8030a9ef6bcd65359551f20e2e37c634fc13d4663f012c4b1",
+    "credentialsType" : "MQTT_BASIC",
+    "credentialsValue" : "{\"clientId\":\"tZEFUOTpLO\",\"userName\":\"fgr_yLvuu\",\"password\":\"fgr_OFpjP\"}"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1761607927429,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1761607927425,
+      "longValue" : 1761607927425,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1761607295648,
+      "longValue" : 1761607292615,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastConnectTime",
+      "lastUpdateTs" : 1761605556380,
+      "longValue" : 1761605556380,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastDisconnectTime",
+      "lastUpdateTs" : 1761607292630,
+      "longValue" : 1761607292630,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"S1\":{\"TH\":[\"C300003623E8\"]},\"S4\":{\"Puerta\":[\"C3000044829D\"],\"Liquidos\":[\"C300000B2BB1\"],\"Presencia\":[\"AC233FAA46EB\"],\"Voltaje\":[\"C300004482F0\",\"C30000448306\"]}}",
+      "key" : "macs",
+      "lastUpdateTs" : 1761606589133,
+      "longValue" : null,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  },
+  "calculatedFields" : [ ]
+}

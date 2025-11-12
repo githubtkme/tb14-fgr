@@ -1,0 +1,1055 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : null,
+    "debugMode" : false,
+    "externalId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "825c3cf1-a5fc-11f0-b059-8b346e2ee2ab"
+    },
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "823701b0-a5fc-11f0-b059-8b346e2ee2ab"
+    },
+    "name" : "Generación de alarmas dispositivos_S1S4",
+    "root" : false,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 1,
+      "type" : "S1"
+    }, {
+      "fromIndex" : 0,
+      "toIndex" : 17,
+      "type" : "S4"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 26,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 5,
+      "type" : "Created"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 2,
+      "type" : "True"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 23,
+      "type" : "True"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 5,
+      "type" : "Cleared"
+    }, {
+      "fromIndex" : 5,
+      "toIndex" : 6,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 8,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 7,
+      "toIndex" : 4,
+      "type" : "True"
+    }, {
+      "fromIndex" : 7,
+      "toIndex" : 23,
+      "type" : "True"
+    }, {
+      "fromIndex" : 9,
+      "toIndex" : 3,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 9,
+      "toIndex" : 14,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 10,
+      "toIndex" : 9,
+      "type" : "True"
+    }, {
+      "fromIndex" : 10,
+      "toIndex" : 12,
+      "type" : "False"
+    }, {
+      "fromIndex" : 11,
+      "toIndex" : 15,
+      "type" : "True"
+    }, {
+      "fromIndex" : 11,
+      "toIndex" : 16,
+      "type" : "False"
+    }, {
+      "fromIndex" : 12,
+      "toIndex" : 7,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 12,
+      "toIndex" : 14,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 14,
+      "toIndex" : 13,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 15,
+      "toIndex" : 3,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 15,
+      "toIndex" : 14,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 16,
+      "toIndex" : 7,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 16,
+      "toIndex" : 14,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 17,
+      "toIndex" : 29,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 18,
+      "toIndex" : 19,
+      "type" : "True"
+    }, {
+      "fromIndex" : 18,
+      "toIndex" : 20,
+      "type" : "False"
+    }, {
+      "fromIndex" : 19,
+      "toIndex" : 3,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 19,
+      "toIndex" : 14,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 20,
+      "toIndex" : 7,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 20,
+      "toIndex" : 14,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 21,
+      "toIndex" : 10,
+      "type" : "S1"
+    }, {
+      "fromIndex" : 21,
+      "toIndex" : 11,
+      "type" : "S1"
+    }, {
+      "fromIndex" : 21,
+      "toIndex" : 18,
+      "type" : "S4"
+    }, {
+      "fromIndex" : 22,
+      "toIndex" : 0,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 24,
+      "toIndex" : 18,
+      "type" : "False"
+    }, {
+      "fromIndex" : 24,
+      "toIndex" : 25,
+      "type" : "True"
+    }, {
+      "fromIndex" : 26,
+      "toIndex" : 27,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 27,
+      "toIndex" : 28,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 28,
+      "toIndex" : 21,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 29,
+      "toIndex" : 27,
+      "type" : "Success"
+    } ],
+    "firstNodeIndex" : 22,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 551,
+        "layoutY" : 250
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var dispositivo = JSON.parse(metadata.dispositivo);\nreturn dispositivo.type;",
+        "tbelScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType == 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8258e190-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "tipoDispositivo",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 775,
+        "layoutY" : 179
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var dispositivo = JSON.parse(metadata.dispositivo);\nvar umbrales = (dispositivo.umbrales !== undefined) ? dispositivo.umbrales : JSON.parse(metadata.umbrales)[dispositivo.type][dispositivo.dispositivo];\n\nvar temperaturaSuperior = umbrales.temperature.superior;\nvar temperaturaInferior = umbrales.temperature.inferior;\nvar humedadSuperior = umbrales.humidity.superior;\nvar humedadInferior = umbrales.humidity.inferior;\n\nvar fueraUmbral = {\n    \"temperature\": false,\n    \"humidity\": false\n};\n\nvar nivelAlarma = {\n    \"temperature\": \"\",\n    \"humidity\": \"\"\n};\n\nif (dispositivo.temperature < temperaturaInferior){\n    fueraUmbral.temperature = \"inferior\";\n}else if(dispositivo.temperature > temperaturaSuperior){\n    fueraUmbral.temperature = \"superior\";\n}\n\nif(fueraUmbral.temperature !== false){\n    var nivelesAlarma = umbrales.temperature.levelsAlarm;\n    \n    if(typeof nivelesAlarma === \"object\"){\n        for (var i = 0; i < nivelesAlarma.length; i++) {\n            var nivel = nivelesAlarma[i];\n            if (dispositivo.temperature > nivel.min && dispositivo.temperature <= nivel.max) {\n                nivelAlarma.temperature = nivel.level;\n                break;\n            }\n        }\n    }else{\n        nivelAlarma.temperature = nivelesAlarma;\n    }\n    \n}\n\nif (dispositivo.humidity < humedadInferior) {\n    fueraUmbral.humidity = \"inferior\";\n}else if(dispositivo.humidity > humedadSuperior){\n    fueraUmbral.humidity = \"superior\";\n}\n\nif(fueraUmbral.humidity !== false){\n    var nivelesAlarma = umbrales.humidity.levelsAlarm;\n    \n    if(typeof nivelesAlarma === \"object\"){\n        for (var i = 0; i < nivelesAlarma.length; i++) {\n            var nivel = nivelesAlarma[i];\n            if (dispositivo.humidity > nivel.min && dispositivo.humidity <= nivel.max) {\n                nivelAlarma.humidity = nivel.level;\n                break;\n            }\n        }\n    }else{\n        nivelAlarma.humidity = nivelesAlarma;\n    }\n    \n}\n\ndelete umbrales.temperature.levelsAlarm;\ndelete umbrales.humidity.levelsAlarm;\ndispositivo.umbrales = umbrales;\n\nmetadata.dispositivo = JSON.stringify(dispositivo);\nmetadata.nivelAlarma = JSON.stringify(nivelAlarma);\nmetadata.fueraUmbral = JSON.stringify(fueraUmbral);\n\ndelete metadata.umbrales;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "825908a0-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "definirSiEstaFueraDeUmbrales",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2923,
+        "layoutY" : 276
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "alarmDetailsBuildJs" : "var details = JSON.parse(metadata.dispositivo);\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "$[nombreAlarma]",
+        "severity" : "${severity}",
+        "propagate" : true,
+        "relationTypes" : [ "Contains" ],
+        "propagateToOwner" : false,
+        "propagateToOwnerHierarchy" : true,
+        "propagateToTenant" : false,
+        "dynamicSeverity" : true
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8259a4e0-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "crearAlarma",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2697,
+        "layoutY" : 276
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return (msg.nombreAlarma !== \"\");",
+        "tbelScript" : "return msg.temperature > 20;"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8259cbf0-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "crearAlarma",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2923,
+        "layoutY" : 352
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmType" : "$[nombreAlarma]"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "825a4120-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "limpiarAlarma",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbClearAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 3172,
+        "layoutY" : 319
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var dispositivo = JSON.parse(metadata.dispositivo);\n\nvar newMSG = {};\nnewMSG[\"alarma\"+dispositivo.clave] = (/ACTIVE/.test(msg.status)) ? msg.startTs : false;\n\ndelete metadata.ss_histeresis;\ndelete metadata.ss_umbrales;\ndelete metadata.ss_macs;\ndelete metadata.alias;\n\nmetadata.alarma = JSON.stringify(msg);\n\nreturn {msg: newMSG, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1758905440310,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "825a6830-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "alarmaControl",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 3423,
+        "layoutY" : 320
+      },
+      "configuration" : {
+        "scope" : "SERVER_SCOPE",
+        "notifyDevice" : false,
+        "sendAttributesUpdatedNotification" : false,
+        "updateAttributesOnlyOnValueChange" : true,
+        "processingSettings" : {
+          "type" : "ON_EVERY_MESSAGE"
+        }
+      },
+      "configurationVersion" : 3,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "825ab650-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "alarmaControl",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2695,
+        "layoutY" : 352
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return (msg.nombreAlarma !== \"\");",
+        "tbelScript" : "return msg.temperature > 20;"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1756999724011,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "825add60-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "limpiarAlarma",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 3674,
+        "layoutY" : 320
+      },
+      "configuration" : {
+        "forwardMsgToDefaultRuleChain" : null,
+        "ruleChainId" : "8c8c1e20-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "825b0470-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "Envio de alarmas dispositivos_S1S4",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2303,
+        "layoutY" : 11
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "function sumarTiempo(ts, cantidad, unidad){\n    \n    var conversion = {\n        \"seg\": 1000,\n        \"min\": 60 * 1000\n    };\n    \n    return ts + (cantidad * conversion[unidad]);\n}\n\nvar dispositivo = JSON.parse(metadata.dispositivo);\nvar histeresis = (dispositivo.histeresis !== undefined) ? dispositivo.histeresis.temperature : JSON.parse(metadata.histeresis)[dispositivo.type][dispositivo.dispositivo].temperature;\nvar fueraUmbral = JSON.parse(metadata.fueraUmbral);\nvar num = dispositivo.posicion + 1;\n\nvar alarma = \"\";\nvar newHisteresis = \"\";\nvar histeresisClear = \"\";\n\nfunction procesarHisteresis(umbral, mensaje, histeresisDispositivo){\n    if(!histeresis[umbral].histeresis){\n        alarma = mensaje;\n        \n        newHisteresis = metadata.ts;\n    }else{\n\n        if(histeresisDispositivo !== false){\n            var tsObjetivo = sumarTiempo(parseInt(histeresisDispositivo), parseInt(histeresis[umbral].histeresis.time), histeresis[umbral].histeresis.unit);\n            \n            if(metadata.ts > tsObjetivo){\n                alarma = mensaje;\n            }\n        }else{\n            newHisteresis = metadata.ts;\n        }\n        \n    }\n    \n    if(newHisteresis !== false){\n        histeresisClear = false;\n    }\n}\n\nvar clave = (fueraUmbral.temperature === \"superior\") ? \"TA\" : \"TB\";\nvar arraba = (fueraUmbral.temperature === \"superior\") ? \"arriba \" : \"abajo \";\nvar mensaje = \"[\" + clave + \"] - Temperatura \" + \" \" + arraba + \"de rango\";\nvar histeresisDispositivo = (msg[\"histeresis\"+clave] === undefined) ? false : msg[\"histeresis\"+clave];\n\nprocesarHisteresis(fueraUmbral.temperature, mensaje, histeresisDispositivo);\n\nif(newHisteresis !== \"\"){\n    msg.histeresis = newHisteresis;\n}\nif(histeresisClear !== \"\"){\n    msg.histeresisClear = histeresisClear;\n}\nmsg.nombreAlarma = alarma;\ndispositivo.clave = clave;\ndispositivo.notificacion = {\n    \"key\": \"temperature\",\n    \"umbral\": arraba.trim(),\n    \"tipo\": \"Temperatura\",\n    \"num\": num,\n    \"simbolo\": \"°C\",\n    \"umbralSitio\": fueraUmbral.temperature\n};\n\nmetadata.severity = JSON.parse(metadata.nivelAlarma).temperature;\nmetadata.dispositivo = JSON.stringify(dispositivo);\n\ndelete metadata.histeresis;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "825b2b80-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "evaluarSiElHisteresisSeCumple",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2053,
+        "layoutY" : 48
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var fueraUmbral = JSON.parse(metadata.fueraUmbral);\n\nreturn (fueraUmbral.temperature !== false);",
+        "tbelScript" : "return msg.temperature > 20;"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "825b2b81-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "TemperaturaFueraDeUmbral",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2053,
+        "layoutY" : 172
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var fueraUmbral = JSON.parse(metadata.fueraUmbral);\n\nreturn (fueraUmbral.humidity !== false);",
+        "tbelScript" : "return msg.temperature > 20;"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "825b5290-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "HumedadFueraDeUmbral",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2302,
+        "layoutY" : 75
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "function sumarTiempo(ts, cantidad, unidad){\n    \n    var conversion = {\n        \"seg\": 1000,\n        \"min\": 60 * 1000\n    };\n    \n    return ts + (cantidad * conversion[unidad]);\n}\n\nvar dispositivo = JSON.parse(metadata.dispositivo);\nvar histeresis = (dispositivo.histeresis !== undefined) ? dispositivo.histeresis.temperature : JSON.parse(metadata.histeresis)[dispositivo.type][dispositivo.dispositivo].temperature;\nvar num = dispositivo.posicion + 1;\n\nvar alarma = \"\";\nvar newHisteresis = \"\";\nvar histeresisClear = \"\";\n\nvar histeresisActivoTA = (msg[\"histeresisTA\"] !== undefined) ? msg[\"histeresisTA\"] : false;\n\nfunction procesarHisteresis(umbral, mensaje, clave, histeresisDispositivo){\n    var alarmaActiva = msg[\"alarma\"+clave];\n\n    if(alarmaActiva !== false){\n        if(!histeresis[umbral].clear){\n            alarma = mensaje;\n            \n            histeresisClear = false;\n            newHisteresis = false;\n        }else{\n            \n            if(histeresisDispositivo !== false){\n                var tsObjetivo = sumarTiempo(parseInt(histeresisDispositivo), parseInt(histeresis[umbral].clear.time), histeresis[umbral].clear.unit);\n                \n                if(metadata.ts > tsObjetivo){\n                    alarma = mensaje;\n                    \n                    histeresisClear = false;\n                    newHisteresis = false;\n                }\n            }else{\n                histeresisClear = metadata.ts;\n            }\n        }\n        \n    }else{\n        newHisteresis = false;\n    }\n}\n\nvar clave = (histeresisActivoTA !== false) ? \"TA\" : \"TB\";\nvar arraba = (histeresisActivoTA !== false) ? \"arriba \" : \"abajo \";\nvar umbral = (histeresisActivoTA !== false) ? \"superior\" : \"inferior\";\nvar mensaje = \"[\" + clave + \"] - Temperatura \" + \" \" + arraba + \"de rango\";\nvar histeresisDispositivo = msg[\"histeresisClear\"+clave];\n\nvar data = procesarHisteresis(umbral, mensaje, clave, histeresisDispositivo);\n\nif(histeresisClear !== \"\"){\n    msg.histeresisClear = histeresisClear;\n}\nif(newHisteresis !== \"\"){\n    msg.histeresis = newHisteresis;\n}\nmsg.nombreAlarma = alarma;\ndispositivo.clave = clave;\ndispositivo.notificacion = {\n    \"key\": \"temperature\",\n    \"umbral\": arraba.trim(),\n    \"tipo\": \"Temperatura\",\n    \"num\": num,\n    \"simbolo\": \"°C\",\n    \"umbralSitio\": umbral\n};\nmetadata.dispositivo = JSON.stringify(dispositivo);\n\ndelete metadata.histeresis;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "825b5291-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "evaluarSiElHisteresisSeCumple",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2954,
+        "layoutY" : 21
+      },
+      "configuration" : {
+        "scope" : "SERVER_SCOPE",
+        "notifyDevice" : false,
+        "sendAttributesUpdatedNotification" : false,
+        "updateAttributesOnlyOnValueChange" : true,
+        "processingSettings" : {
+          "type" : "ON_EVERY_MESSAGE"
+        }
+      },
+      "configurationVersion" : 3,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "825ba0b0-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "histeresisControl",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2702,
+        "layoutY" : 22
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var newMSG = {};\nvar dispositivo = JSON.parse(metadata.dispositivo);\n\nif(msg.histeresisClear !== undefined){\n    newMSG[\"histeresisClear\"+dispositivo.clave] = (msg.histeresisClear !== false) ? parseInt(msg.histeresisClear) : msg.histeresisClear;\n}\n\nif(msg.histeresis !== undefined){\n    newMSG[\"histeresis\"+dispositivo.clave] = (msg.histeresis !== false) ? parseInt(msg.histeresis) : msg.histeresis;\n}\n\nreturn {msg: newMSG, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "825ba0b1-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "histeresisControl",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2303,
+        "layoutY" : 136
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "function sumarTiempo(ts, cantidad, unidad){\n    \n    var conversion = {\n        \"seg\": 1000,\n        \"min\": 60 * 1000\n    };\n    \n    return ts + (cantidad * conversion[unidad]);\n}\n\nvar dispositivo = JSON.parse(metadata.dispositivo);\nvar histeresis = (dispositivo.histeresis !== undefined) ? dispositivo.histeresis.humidity : JSON.parse(metadata.histeresis)[dispositivo.type][dispositivo.dispositivo].humidity;\nvar fueraUmbral = JSON.parse(metadata.fueraUmbral);\nvar num = dispositivo.posicion + 1;\n\nvar alarma = \"\";\nvar newHisteresis = \"\";\nvar histeresisClear = \"\";\n\nfunction procesarHisteresis(umbral, mensaje, histeresisDispositivo){\n    if(!histeresis[umbral].histeresis){\n        alarma = mensaje;\n        \n        newHisteresis = metadata.ts;\n    }else{\n\n        if(histeresisDispositivo !== false){\n            var tsObjetivo = sumarTiempo(parseInt(histeresisDispositivo), parseInt(histeresis[umbral].histeresis.time), histeresis[umbral].histeresis.unit);\n            \n            if(metadata.ts > tsObjetivo){\n                alarma = mensaje;\n            }\n        }else{\n            newHisteresis = metadata.ts;\n        }\n        \n    }\n    \n    if(newHisteresis !== false){\n        histeresisClear = false;\n    }\n}\n\nvar clave = (fueraUmbral.humidity === \"superior\") ? \"HA\" : \"HB\";\nvar arraba = (fueraUmbral.humidity === \"superior\") ? \"arriba \" : \"abajo \";\nvar mensaje = \"[\" + clave + \"] - Humedad \" + \" \" + arraba + \"de rango\";\nvar histeresisDispositivo = (msg[\"histeresis\"+clave] === undefined) ? false : msg[\"histeresis\"+clave];\n\nprocesarHisteresis(fueraUmbral.humidity, mensaje, histeresisDispositivo);\n\nif(newHisteresis !== \"\"){\n    msg.histeresis = newHisteresis;\n}\nif(histeresisClear !== \"\"){\n    msg.histeresisClear = histeresisClear;\n}\nmsg.nombreAlarma = alarma;\ndispositivo.clave = clave;\ndispositivo.notificacion = {\n    \"key\": \"humidity\",\n    \"umbral\": arraba.trim(),\n    \"tipo\": \"Humedad\",\n    \"num\": num,\n    \"simbolo\": \"%HR\",\n    \"umbralSitio\": fueraUmbral.humidity\n};\n\nmetadata.severity = JSON.parse(metadata.nivelAlarma).humidity;\nmetadata.dispositivo = JSON.stringify(dispositivo);\n\ndelete metadata.histeresis;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "825bc7c0-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "evaluarSiElHisteresisSeCumple",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2304,
+        "layoutY" : 207
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "function sumarTiempo(ts, cantidad, unidad){\n    \n    var conversion = {\n        \"seg\": 1000,\n        \"min\": 60 * 1000\n    };\n    \n    return ts + (cantidad * conversion[unidad]);\n}\n\nvar dispositivo = JSON.parse(metadata.dispositivo);\nvar histeresis = (dispositivo.histeresis !== undefined) ? dispositivo.histeresis.humidity : JSON.parse(metadata.histeresis)[dispositivo.type][dispositivo.dispositivo].humidity;\nvar fueraUmbral = JSON.parse(metadata.fueraUmbral);\nvar num = dispositivo.posicion + 1;\n\nvar alarma = \"\";\nvar newHisteresis = \"\";\nvar histeresisClear = \"\";\n\nvar histeresisActivoHA = (msg[\"histeresisHA\"] !== undefined) ? msg[\"histeresisHA\"] : false;\n\nfunction procesarHisteresis(umbral, mensaje, clave, histeresisDispositivo){\n    var alarmaActiva = msg[\"alarma\"+clave];\n\n    if(alarmaActiva !== false){\n        if(!histeresis[umbral].clear){\n            alarma = mensaje;\n            \n            histeresisClear = false;\n            newHisteresis = false;\n        }else{\n            \n            if(histeresisDispositivo !== false){\n                var tsObjetivo = sumarTiempo(parseInt(histeresisDispositivo), parseInt(histeresis[umbral].clear.time), histeresis[umbral].clear.unit);\n                \n                if(metadata.ts > tsObjetivo){\n                    alarma = mensaje;\n                    \n                    histeresisClear = false;\n                    newHisteresis = false;\n                }\n            }else{\n                histeresisClear = metadata.ts;\n            }\n        }\n        \n    }else{\n        newHisteresis = false;\n    }\n}\n\nvar clave = (histeresisActivoHA !== false) ? \"HA\" : \"HB\";\nvar arraba = (histeresisActivoHA !== false) ? \"arriba \" : \"abajo \";\nvar umbral = (histeresisActivoHA !== false) ? \"superior\" : \"inferior\";\nvar mensaje = \"[\" + clave + \"] - Humedad \" + \" \" + arraba + \"de rango\";\nvar histeresisDispositivo = msg[\"histeresisClear\"+clave];\n\nvar data = procesarHisteresis(umbral, mensaje, clave, histeresisDispositivo);\n\nif(histeresisClear !== \"\"){\n    msg.histeresisClear = histeresisClear;\n}\nif(newHisteresis !== \"\"){\n    msg.histeresis = newHisteresis;\n}\nmsg.nombreAlarma = alarma;\ndispositivo.clave = clave;\ndispositivo.notificacion = {\n    \"key\": \"humidity\",\n    \"umbral\": arraba.trim(),\n    \"tipo\": \"Humedad\",\n    \"num\": num,\n    \"simbolo\": \"%HR\",\n    \"umbralSitio\": umbral\n};\nmetadata.dispositivo = JSON.stringify(dispositivo);\n\ndelete metadata.histeresis;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "825bc7c1-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "evaluarSiElHisteresisSeCumple",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 775,
+        "layoutY" : 331
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var dispositivo = JSON.parse(metadata.dispositivo);\nvar umbrales = (dispositivo.umbrales !== undefined) ? dispositivo.umbrales : JSON.parse(metadata.umbrales)[dispositivo.type][dispositivo.dispositivo];\nvar fueraUmbral;\nvar key;\nvar severity;\n\nif(umbrales.unlocked !== undefined){\n    fueraUmbral = (dispositivo.unlocked === umbrales.unlocked) ? true : false;\n    key = \"unlocked\";\n}\n\nif(umbrales.uninstalled !== undefined){\n    fueraUmbral = (dispositivo.uninstalled === umbrales.uninstalled) ? true : false;\n    key = \"uninstalled\";\n}\n\nif(fueraUmbral){\n    var severity = umbrales.levelsAlarm;\n}\n\ndispositivo.key = key;\ndispositivo.nombre = metadata.ss_nombre;\nmetadata.fueraUmbral = fueraUmbral;\nmetadata.severity = severity;\nmetadata.dispositivo = JSON.stringify(dispositivo);\n\ndelete metadata.umbrales;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "825beed0-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "definirSiEstaFueraDeUmbrales",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2054,
+        "layoutY" : 358
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return (metadata.fueraUmbral === \"true\") ? true : false;",
+        "tbelScript" : "return msg.fueraUmbral;"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "825beed1-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "estaFueraDeUmbral",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2304,
+        "layoutY" : 322
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "function sumarTiempo(ts, cantidad, unidad){\n    \n    var conversion = {\n        \"seg\": 1000,\n        \"min\": 60 * 1000\n    };\n    \n    return ts + (cantidad * conversion[unidad]);\n}\n\nvar dispositivo = JSON.parse(metadata.dispositivo);\nvar histeresis = (dispositivo.histeresis !== undefined) ? dispositivo.histeresis : JSON.parse(metadata.histeresis)[dispositivo.type][dispositivo.dispositivo];\nvar num = dispositivo.posicion + 1;\n\nvar alarma = \"\";\nvar newHisteresis = \"\";\nvar histeresisClear = \"\";\n\nvar clave = (dispositivo.dispositivo.charAt(0))+ \"A\";\nvar texto = dispositivo.dispositivo;\nif(texto === \"Puerta\" || texto === \"Liquidos\"){\n    texto = (texto === \"Puerta\") ? \"Puerta Abierta\" : \"Detección de líquidos\";\n}\nvar mensaje = \"[\" + clave + \"] - \" + texto;\nvar histeresisDispositivo = (msg[\"histeresis\"+clave] === undefined) ? false : msg[\"histeresis\"+clave];\n\nif(!histeresis[dispositivo.key].histeresis){\n    alarma = mensaje;\n    newHisteresis = metadata.ts;\n}else{\n    if(histeresisDispositivo !== false){\n        var tsObjetivo = sumarTiempo(parseInt(histeresisDispositivo), parseInt(histeresis[dispositivo.key].histeresis.time), histeresis[dispositivo.key].histeresis.unit);\n        \n        if(metadata.ts > tsObjetivo){\n            alarma = mensaje;\n        }\n    }else{\n        newHisteresis = metadata.ts;\n    }\n    \n    if(newHisteresis !== false){\n        histeresisClear = false;\n    }\n}\n\nif(newHisteresis !== \"\"){\n    msg.histeresis = newHisteresis;\n}\n\nif(histeresisClear !== \"\"){\n    msg.histeresisClear = histeresisClear;\n}\n\nmsg.nombreAlarma = alarma;\ndispositivo.clave = clave;\nmetadata.dispositivo = JSON.stringify(dispositivo);\n\ndelete metadata.histeresis;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1757087648512,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "825c15e0-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "evaluarSiElHisteresisSeCumple",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2303,
+        "layoutY" : 404
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "function sumarTiempo(ts, cantidad, unidad){\n    \n    var conversion = {\n        \"seg\": 1000,\n        \"min\": 60 * 1000\n    };\n    \n    return ts + (cantidad * conversion[unidad]);\n}\n\nvar dispositivo = JSON.parse(metadata.dispositivo);\nvar histeresis = (dispositivo.histeresis !== undefined) ? dispositivo.histeresis : JSON.parse(metadata.histeresis)[dispositivo.type][dispositivo.dispositivo];\nvar num = dispositivo.posicion + 1;\n\nvar alarma = \"\";\nvar newHisteresis = \"\";\nvar histeresisClear = \"\";\n\nvar clave = (dispositivo.dispositivo.charAt(0)) + \"A\";\nvar texto = dispositivo.dispositivo;\nif(texto === \"Puerta\" || texto === \"Liquidos\"){\n    texto = (texto === \"Puerta\") ? \"Puerta Abierta\" : \"Detección de líquidos\";\n}\nvar mensaje = \"[\" + clave + \"] - \" + texto;\nvar histeresisDispositivo = (msg[\"histeresisClear\"+clave] === undefined) ? false : msg[\"histeresisClear\"+clave];\nvar alarmaActiva = (msg[\"alarma\"+clave] === undefined) ? false : msg[\"alarma\"+clave];\n\nif(alarmaActiva !== false){\n    if(!histeresis[dispositivo.key].clear){\n        alarma = mensaje;\n        \n        histeresisClear = false;\n        newHisteresis = false;\n    }else{\n        if(histeresisDispositivo !== false){\n            var tsObjetivo = sumarTiempo(parseInt(histeresisDispositivo), parseInt(histeresis[dispositivo.key].clear.time), histeresis[dispositivo.key].clear.unit);\n            \n            if(metadata.ts > tsObjetivo){\n                alarma = mensaje;\n                \n                histeresisClear = false;\n                newHisteresis = false;\n            }\n        }else{\n            histeresisClear = metadata.ts\n        }\n    }\n}else{\n    newHisteresis = false;\n}\n\nif(newHisteresis !== \"\"){\n    msg.histeresis = newHisteresis;\n}\n\nif(histeresisClear !== \"\"){\n    msg.histeresisClear = histeresisClear;\n}\n\nmsg.nombreAlarma = alarma;\ndispositivo.clave = clave;\nmetadata.dispositivo = JSON.stringify(dispositivo);\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1757087648512,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "825c15e1-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "evaluarSiElHisteresisSeCumple",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1800,
+        "layoutY" : 250
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var dispositivo = JSON.parse(metadata.dispositivo);\n\nreturn dispositivo.type;",
+        "tbelScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType == 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "825c3cf0-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "tipoDispositivo",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 305,
+        "layoutY" : 251
+      },
+      "configuration" : {
+        "dataToFetch" : "ATTRIBUTES",
+        "dataMapping" : {
+          "histeresisIbeacon" : "histeresis",
+          "umbralesIbeacon" : "umbrales"
+        },
+        "fetchTo" : "METADATA"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "825c3cf1-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "histeresisUmbralesTenant",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetTenantAttributeNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2915,
+        "layoutY" : 471
+      },
+      "configuration" : {
+        "forwardMsgToDefaultRuleChain" : false,
+        "ruleChainId" : "2625e080-a601-11f0-b059-8b346e2ee2ab"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "825c6400-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "Estado dispositivos/activos",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1803,
+        "layoutY" : 407
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var dispositivo = JSON.parse(metadata.dispositivo);\n\nreturn (dispositivo.dispositivo === \"FlujoAire\" && (dispositivo.mac !== \"C30000448352\" && dispositivo.mac !== \"C3000044835F\" && dispositivo.mac !== \"C300003CF392\"));",
+        "tbelScript" : "return msg.temperature > 20;"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1757015850882,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "825c8b10-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "FlujoAire",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2051,
+        "layoutY" : 496
+      },
+      "configuration" : {
+        "forwardMsgToDefaultRuleChain" : false,
+        "ruleChainId" : "a4491b10-7250-11f0-9ba5-395e7a2b1ef2"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "825cb220-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "FlujoAireCombinaciónDeDispositivos",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1050,
+        "layoutY" : 176
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var keys = [\"histeresisTA\",\"histeresisClearTA\",\"histeresisTB\",\"histeresisClearTB\",\"alarmaTA\",\"alarmaTB\",\"histeresisHA\",\"histeresisClearHA\",\"histeresisHB\",\"histeresisClearHB\",\"alarmaHA\",\"alarmaHB\"];\n\nvar newMSG = {};\n\nfor (var i = 0; i < keys.length; i++) {\n    var key = i+1;\n    newMSG[\"key\"+key] = keys[i];\n}\n\n\n\nreturn {msg: newMSG, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1758652427434,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "825cd930-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "listaAtributos",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1301,
+        "layoutY" : 250
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : false,
+        "fetchTo" : "METADATA",
+        "clientAttributeNames" : [ ],
+        "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ "$[key1]", "$[key2]", "$[key3]", "$[key4]", "$[key5]", "$[key6]", "$[key7]", "$[key8]", "$[key9]", "$[key10]", "$[key11]", "$[key12]", "$[key13]", "$[key14]", "$[key15]" ],
+        "latestTsKeyNames" : [ ],
+        "getLatestValueWithTs" : false
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "825d0040-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "getAttributes",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1551,
+        "layoutY" : 250
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var keys = {};\n\nfor (var key in msg) {\n    if(metadata[\"ss_\"+msg[key]] !== undefined){\n        if(metadata[\"ss_\"+msg[key]] === \"true\" || metadata[\"ss_\"+msg[key]] === \"false\"){\n            keys[msg[key]] = (metadata[\"ss_\"+msg[key]] === \"true\") ? true : false;\n        }else{\n            keys[msg[key]] = parseInt(metadata[\"ss_\"+msg[key]]);\n        }\n        \n        delete metadata[\"ss_\"+msg[key]];\n    }\n}\nreturn {msg: keys, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1758909019985,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "825d0041-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "generarObjetoDeHisteresisYAlarmas",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1050,
+        "layoutY" : 331
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var dispositivo = JSON.parse(metadata.dispositivo);\nvar clave = (dispositivo.dispositivo.charAt(0))+ \"A\";\n\nvar newMSG = {\n    \"key1\": \"histeresis\"+clave,\n    \"key2\": \"histeresisClear\"+clave,\n    \"key3\": \"alarma\"+clave\n}\n\nreturn {msg: newMSG, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "825d2750-a5fc-11f0-b059-8b346e2ee2ab"
+      },
+      "name" : "listaAtributos",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "823701b0-a5fc-11f0-b059-8b346e2ee2ab"
+    },
+    "to" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "8c8c1e20-a5fc-11f0-b059-8b346e2ee2ab"
+    },
+    "type" : "Uses",
+    "typeGroup" : "COMMON",
+    "version" : 8771
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "823701b0-a5fc-11f0-b059-8b346e2ee2ab"
+    },
+    "to" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "a4491b10-7250-11f0-9ba5-395e7a2b1ef2"
+    },
+    "type" : "Uses",
+    "typeGroup" : "COMMON",
+    "version" : 8790
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "823701b0-a5fc-11f0-b059-8b346e2ee2ab"
+    },
+    "to" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "2625e080-a601-11f0-b059-8b346e2ee2ab"
+    },
+    "type" : "Uses",
+    "typeGroup" : "COMMON",
+    "version" : 8787
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "78bb2e40-a5fc-11f0-b059-8b346e2ee2ab"
+    },
+    "to" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "823701b0-a5fc-11f0-b059-8b346e2ee2ab"
+    },
+    "type" : "Uses",
+    "typeGroup" : "COMMON",
+    "version" : 12088
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "assetProfileId" : {
+      "entityType" : "ASSET_PROFILE",
+      "id" : "fa6931e0-6d98-11f0-b5cd-673555e50245"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "98aa0a20-a861-11f0-b059-8b346e2ee2ab"
+    },
+    "label" : "Reforma 75",
+    "name" : "Reforma75",
+    "ownerId" : null,
+    "type" : "default"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "98aa0a20-a861-11f0-b059-8b346e2ee2ab"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "b889e850-af9c-11f0-bcc5-c97b74515061"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 11947
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "98aa0a20-a861-11f0-b059-8b346e2ee2ab"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "c572ce30-a879-11f0-b059-8b346e2ee2ab"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 10640
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "98aa0a20-a861-11f0-b059-8b346e2ee2ab"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "6b42c8a0-b04b-11f0-bcc5-c97b74515061"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 12115
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "98aa0a20-a861-11f0-b059-8b346e2ee2ab"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "7266a250-b04b-11f0-bcc5-c97b74515061"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 12116
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "address",
+      "lastUpdateTs" : 1760388660976,
+      "longValue" : null,
+      "strValue" : "AV. PASEO DE LA REFORMA NO. 75"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "latitude",
+      "lastUpdateTs" : 1760379922659,
+      "longValue" : null,
+      "strValue" : "19.44054"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "longitude",
+      "lastUpdateTs" : 1760379930041,
+      "longValue" : null,
+      "strValue" : "-99.14413"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"c572ce30-a879-11f0-b059-8b346e2ee2ab\":\"normal\",\"b889e850-af9c-11f0-bcc5-c97b74515061\":\"alarmed\",\"6b42c8a0-b04b-11f0-bcc5-c97b74515061\":\"normal\",\"7266a250-b04b-11f0-bcc5-c97b74515061\":\"alarmed\",\"474e3d60-b5c5-11f0-bcc5-c97b74515061\":\"alarmed\",\"4ca2ae40-b5c5-11f0-bcc5-c97b74515061\":\"alarmed\"}",
+      "key" : "modulos",
+      "lastUpdateTs" : 1762966423166,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "state",
+      "lastUpdateTs" : 1761843705552,
+      "longValue" : null,
+      "strValue" : "alarmed"
+    } ]
+  },
+  "calculatedFields" : [ ]
+}

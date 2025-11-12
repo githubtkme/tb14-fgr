@@ -1,0 +1,173 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : false,
+      "overwriteActivityTime" : false,
+      "description" : ""
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "266914b0-6e82-11f0-b66c-af0ec4b52e7b"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "672c9240-6d9e-11f0-b5cd-673555e50245"
+    },
+    "label" : "UPS-2-Atrás",
+    "name" : "Muralla_S1_TH_011",
+    "ownerId" : null,
+    "softwareId" : null,
+    "type" : "TemperaturaHumedad"
+  },
+  "credentials" : {
+    "credentialsId" : "UOd5fLMMFj8Q7OUQOyDw",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "10b20d70-6e87-11f0-b66c-af0ec4b52e7b"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "672c9240-6d9e-11f0-b5cd-673555e50245"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 1049
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : true,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1762670645630,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "alarmaTA",
+      "lastUpdateTs" : 1754027670885,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "histeresisClearHB",
+      "lastUpdateTs" : 1753921359381,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "histeresisClearTA",
+      "lastUpdateTs" : 1754011845206,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "histeresisClearTB",
+      "lastUpdateTs" : 1753921359382,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "histeresisHB",
+      "lastUpdateTs" : 1753921359381,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "histeresisTA",
+      "lastUpdateTs" : 1754027670856,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "histeresisTB",
+      "lastUpdateTs" : 1753921359382,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1762650914669,
+      "longValue" : 1762650914668,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1762966865639,
+      "longValue" : 1762966864327,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "latitude",
+      "lastUpdateTs" : 1754019453019,
+      "longValue" : null,
+      "strValue" : "0.405"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "longitude",
+      "lastUpdateTs" : 1754019528706,
+      "longValue" : null,
+      "strValue" : "0.68"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "state",
+      "lastUpdateTs" : 1754019447148,
+      "longValue" : null,
+      "strValue" : "normal"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"temperature\":{\"superior\":30,\"inferior\":10,\"levelsAlarm\":[{\"min\":8,\"max\":10,\"level\":\"WARNING\"},{\"min\":0,\"max\":8,\"level\":\"CRITICAL\"},{\"min\":30,\"max\":45,\"level\":\"WARNING\"},{\"min\":45,\"max\":100,\"level\":\"CRITICAL\"}]},\"humidity\":{\"superior\":95,\"inferior\":17,\"levelsAlarm\":\"CRITICAL\"}}",
+      "key" : "umbrales",
+      "lastUpdateTs" : 1760568768303,
+      "longValue" : null,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  },
+  "calculatedFields" : [ ]
+}

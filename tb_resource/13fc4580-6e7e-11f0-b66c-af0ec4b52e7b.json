@@ -1,0 +1,41 @@
+{
+  "entityType" : "TB_RESOURCE",
+  "entity" : {
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "data" : "PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTAiIGN5PSIxMCIgcj0iNiIgZmlsbD0iIzgwMDA4MCIvPgo8L3N2Zz4=",
+    "descriptor" : {
+      "mediaType" : "image/svg+xml",
+      "width" : 20,
+      "height" : 20,
+      "size" : 149,
+      "etag" : "72c8b1b6a2e0647daefd9820b59feadc4f241e4fa97ad9b4af6e1794d1bd0f50",
+      "previewDescriptor" : {
+        "mediaType" : "image/svg+xml",
+        "width" : 20,
+        "height" : 20,
+        "size" : 149,
+        "etag" : "72c8b1b6a2e0647daefd9820b59feadc4f241e4fa97ad9b4af6e1794d1bd0f50"
+      }
+    },
+    "etag" : "72c8b1b6a2e0647daefd9820b59feadc4f241e4fa97ad9b4af6e1794d1bd0f50",
+    "externalId" : null,
+    "fileName" : "image.svg",
+    "id" : {
+      "entityType" : "TB_RESOURCE",
+      "id" : "13fc4580-6e7e-11f0-b66c-af0ec4b52e7b"
+    },
+    "link" : "/api/images/tenant/image.svg",
+    "name" : "image.svg",
+    "preview" : null,
+    "public" : true,
+    "publicLink" : "/api/images/public/oupXtUdJbyhlIw4EViVuIyDAfy96ERhn",
+    "publicResourceKey" : "oupXtUdJbyhlIw4EViVuIyDAfy96ERhn",
+    "resourceKey" : "image.svg",
+    "resourceSubType" : "IMAGE",
+    "resourceType" : "IMAGE",
+    "title" : "image.svg"
+  }
+}

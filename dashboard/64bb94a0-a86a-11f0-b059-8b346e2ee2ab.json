@@ -1,0 +1,1461 @@
+{
+  "entityType" : "DASHBOARD",
+  "entity" : {
+    "title" : "General",
+    "image" : null,
+    "mobileHide" : false,
+    "mobileOrder" : null,
+    "configuration" : {
+      "description" : "",
+      "widgets" : {
+        "6e6ba862-cd07-d6d7-ddaa-dbbed4231a0b" : {
+          "typeFullFqn" : "system.cards.markdown_card",
+          "type" : "latest",
+          "sizeX" : 5,
+          "sizeY" : 3.5,
+          "config" : {
+            "datasources" : [ ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1755014276951,
+                  "endTimeMs" : 1755100676951
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "useMarkdownTextFunction" : false,
+              "markdownTextPattern" : "<div class=\"market-layout flex size-full flex-col\" style=\"padding: 0;\">\n    <div class=\"flex flex-1 flex-col\" style=\"position: relative;\">\n        <tb-dashboard-state class=\"flex-1\" [ctx]=\"ctx\" [syncParentStateParams]=\"true\" stateId=\"global_map\"></tb-dashboard-state>\n     </div>\n</div>",
+              "markdownTextFunction" : "return '# Some title\\n - Entity name: ' + data[0]['entityName'];",
+              "applyDefaultMarkdownStyle" : true,
+              "markdownCss" : ".tb-markdown-view .tb-progress-cover, .tb-markdown-view .mat-drawer-container {\n    background-color: #fff;\n}\n\n.tb-markdown-view div, .tb-markdown-view p {\n    line-height: normal;\n}\n\n.market-layout {\n    position: relative;\n}\n\n.market-title {\n    font-size: 26px;\n    padding-bottom: 16px;\n    padding-left: 10px;\n    padding-top: 5px;\n}\n\n.state-filter-title {\n    padding-bottom: 15px;\n    padding-left: 10px;\n}\n\n.market-layout .alarm-badges-layout {\n    position: absolute;\n    height: 50px;\n    top: 0;\n    left: 0;\n    right: 0;\n    z-index: 2;\n    display: flex;\n    justify-content: center;\n    pointer-events: none;\n}\n\n.market-layout .alarm-badges-layout .alarm-badges {\n    height: 50px;\n    width: 350px;\n    pointer-events: all;\n}"
+            },
+            "title" : "Markdown/HTML Card",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false,
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true,
+            "enableDataExport" : false,
+            "borderRadius" : "8px",
+            "widgetCss" : ".tb-widget-container .tb-widget .tb-multiple-input {\n    background-color: #FAFAFA;\n    border-radius: 4px;\n}\n\n.tb-widget-container .tb-widget .tb-multiple-input .input-field {\n    padding-right: 30px;\n}\n\n.tb-widget-container .tb-widget .tb-multiple-input .mat-mdc-slide-toggle {\n    margin-top: 4px !important;\n    margin-bottom: 4px !important;\n}\n\n.tb-widget-container .tb-widget .tb-multiple-input .mdc-form-field > label {\n    width: 120px;\n}\n\n.tb-widget-container .tb-widget .tb-multiple-input .mat-mdc-slide-toggle .mdc-form-field > label .mat-icon {\n    margin-left: 0;\n}\n\n.tb-widget-container .tb-widget .tb-multiple-input .mat-mdc-slide-toggle .mdc-form-field .label-wrapper {\n    font-weight: bold;\n}\n\n.tb-widget-container .tb-widget .tb-multiple-input .mat-mdc-slide-toggle .mdc-switch {\n    width: 42px;\n    margin-left: 8px;\n}\n\n.tb-widget-container .tb-widget .tb-multiple-input .mat-mdc-slide-toggle .mdc-switch .mdc-switch__track {\n    border-radius: 16px;\n    height: 24px;\n}\n\n.tb-widget-container .tb-widget .tb-multiple-input .mat-mdc-slide-toggle .mdc-switch .mdc-switch__handle-track {\n    width: calc(100% - 24px);\n    left: 2px;\n}\n\n.tb-widget-container .tb-widget .tb-multiple-input .mat-mdc-slide-toggle .mdc-switch .mdc-switch__handle {\n    border-radius: 10px;\n    width: 20px;\n    height: 20px;\n}\n\n.tb-widget-container .tb-widget .tb-multiple-input .mat-mdc-slide-toggle .mdc-switch .mdc-switch__ripple {\n    width: 40px;\n    height: 40px;\n}\n\n.tb-widget-container .tb-widget .tb-multiple-input .mat-mdc-slide-toggle .mdc-switch .mdc-switch__icons {\n    display: none;\n}\n\n.tb-widget-container .tb-widget .tb-multiple-input .mat-mdc-slide-toggle .mdc-switch.mdc-switch--unselected:enabled .mdc-switch__handle::after {\n    background: #fafafa;\n}\n\n.tb-widget-container .tb-widget .tb-multiple-input .mat-mdc-slide-toggle .mdc-switch.mdc-switch--selected:enabled .mdc-switch__handle::after {\n    background: #fafafa;\n}\n\n.tb-widget-container .tb-widget .tb-multiple-input .mat-mdc-slide-toggle .mdc-switch .mdc-switch__track::after {\n    background: #F2994A;\n}\n\n",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "6e6ba862-cd07-d6d7-ddaa-dbbed4231a0b"
+        },
+        "909dcc76-584b-a387-7d8d-7ece40cd7b1d" : {
+          "typeFullFqn" : "system.cards.markdown_card",
+          "type" : "latest",
+          "sizeX" : 5,
+          "sizeY" : 3.5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "entityAliasId" : "73d7c089-93b7-fa01-fddf-450dce737304",
+              "dataKeys" : [ {
+                "name" : "state",
+                "type" : "attribute",
+                "label" : "state",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.9974376644171749
+              }, {
+                "name" : "address",
+                "type" : "attribute",
+                "label" : "address",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.2688939457722219
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1755014296802,
+                  "endTimeMs" : 1755100696802
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "useMarkdownTextFunction" : true,
+              "markdownTextPattern" : "### Markdown/HTML card\n - **Current entity**: ${entityName}.\n - **Current value**: ${Random}.",
+              "markdownTextFunction" : "var locationState;\nvar name, address, state, label;\n\nif (data && data.length && data[0]['entityId']) {\n    locationState = true;\n    state = data[0].state;\n    label = (data[0]['entityLabel'] !== \"\") ? data[0]['entityLabel'] : data[0]['entityName'];\n    name = data[0]['entityName'];\n    address = data[0]['address'];\n} else {\n    locationState = false;\n    state = '';\n    name = 'N/A';\n    address = 'N/A';\n    label = 'N/A';\n}\n\nvar stateColor;\nvar stateLabel;\nswitch (state) {\n    case 'normal':\n        stateColor = '#1F8B4D';\n        stateLabel = 'Normal';\n        break;\n    case 'alarmed':\n        stateColor = '#E64A19';\n        stateLabel = 'Alarmado';\n        break;\n    case 'inactive':\n        stateColor = '#800080';\n        stateLabel = 'Inactivo';\n        break;\n}\n              \nvar typeSvg = `<svg width=\"100\" height=\"100\" viewBox=\"0 0 100 100\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"color: ${stateColor};\">\n    <circle cx=\"50\" cy=\"50\" r=\"45\" fill=\"currentColor\"/>\n    <g transform=\"translate(20, 20) scale(2.5)\">\n        <path fill=\"#fff\" d=\"M17.553 16.106a1 1 0 0 1 1.283.345l.058.102l2 4a1 1 0 0 1-.765 1.439L20 22H4a1 1 0 0 1-.945-1.328l.05-.12l2-4a1 1 0 0 1 1.836.788l-.047.107L5.618 20h12.764l-1.276-2.553a1 1 0 0 1 .447-1.341ZM12 2a7 7 0 0 1 7 7c0 2.382-1.289 4.317-2.623 5.69a15.721 15.721 0 0 1-2.418 2.008l-.373.246l-.332.209c-.052.031-.102.06-.149.09l-.257.148c-.528.3-1.168.3-1.696 0l-.257-.149l-.31-.189a17.017 17.017 0 0 1-.171-.109l-.373-.246a15.72 15.72 0 0 1-2.418-2.008C6.289 13.317 5 11.382 5 9a7 7 0 0 1 7-7Zm0 2a5 5 0 0 0-5 5c0 1.636.89 3.095 2.057 4.296a13.913 13.913 0 0 0 2.314 1.885l.34.217c.105.065.202.123.289.174l.29-.174l.339-.217a13.913 13.913 0 0 0 2.314-1.885C16.11 12.096 17 10.636 17 9a5 5 0 0 0-5-5Zm0 2a3 3 0 1 1 0 6a3 3 0 0 1 0-6Zm0 2a1 1 0 1 0 0 2a1 1 0 0 0 0-2Z\"/>\n    </g>\n</svg>`;\n\nvar icon = 'data:image/svg+xml,' + encodeURIComponent(`<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"${stateColor}\"/></svg>`);\nvar stateHTML = `<span><img style=\"vertical-align: middle;\" class=\"mat-icon\" src=\"${icon}\"><span style=\"vertical-align: middle; padding-left: 8px;\">${stateLabel}</span></span>\n`;\n\nvar encodedTypeSvg = encodeURIComponent(typeSvg);\nvar typeSvgUrl = 'data:image/svg+xml,' + encodedTypeSvg;\n\nvar header = '<div style=\"display:flex;align-items:center;gap:12px;margin-bottom:10px;\">' +\n                '<div style=\"display:flex;align-items:center;justify-content:center;\"><button id=\"go-back\" matTooltip=\"Go back\" type=\"button\" mat-icon-button><mat-icon>arrow_back</mat-icon></button></div>' +\n                '<div style=\"display:flex;align-items:center;justify-content:center;width:45px;height:45px;\">' +\n                    '<img style=\"width:45px;height:45px;display:block;\" src=\"'+ typeSvgUrl +'\">'+\n                '</div>' +\n                '<div style=\"display:flex;align-items:center;justify-content:center;\">' +\n                   '<div style=\"font-weight:600;font-size:16px;line-height:1.1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;\">' + label + '</div>' +\n                '</div>' +\n                '<div>'+\n                    '<button id=\"' + name + '\" type=\"button\" class=\"mdc-button mdc-button--raised mat-mdc-raised-button mat-primary mat-mdc-button-base\">Ver sucursal</button></div>' +\n             '</div>';\n             \nreturn '<div style=\"width: 100%; height: 100%; padding: 16px; display: flex; flex-direction: column; gap: 16px;\">' +\n          (locationState \n            ? (header +\n                '<div style=\"display:flex;gap:12px;margin-top:8px;\" class=\"params\">' +\n                    '<div fxFlex=\"70\" class=\"param-cell\" fxLayout=\"column\" fxLayoutGap=\"8px\">' +\n                        '<div class=\"param-title\">Dirección: </div>' +\n                        '<div class=\"param\">'+ address +'</div>' +\n                    '</div>' +\n                    '<div fxFlex=\"30\" class=\"param-cell\" fxLayout=\"column\" fxLayoutGap=\"8px\">' +\n                        '<div class=\"param-title\">Estado: </div>' +\n                        '<div class=\"param\">'+ stateHTML +'</div>' +\n                    '</div>' +\n                '</div>' +\n               '<tb-dashboard-state fxFlex [ctx]=\"ctx\" [syncParentStateParams]=\"true\" stateId=\"location_devices\"></tb-dashboard-state>') \n            : '<tb-dashboard-state fxFlex [ctx]=\"ctx\" stateId=\"locations_list\"></tb-dashboard-state>') +\n       '</div>';",
+              "applyDefaultMarkdownStyle" : true,
+              "markdownCss" : ".tb-markdown-view .tb-progress-cover, .tb-markdown-view .mat-drawer-container {\n    background-color: #fff;\n}\n.tb-markdown-view div, .tb-markdown-view p {\n    line-height: normal;\n}\n\n.tb-markdown-view > div {\n    padding: 0;\n}\n\n.tb-markdown-view table {\n    border: none;\n    border-radius: 0px;\n    overflow: auto;\n}\n\n.tb-markdown-view .mat-toolbar.mat-primary div {\n    color: var(--tb-primary-contrast-500);\n}\n\n.tb-markdown-view .tb-widget-container > .tb-widget {\n    border-radius: 0px;\n}\n\n.tb-markdown-view .tb-widget-container > .tb-widget .tb-table-widget mat-toolbar {\n    height: 65px;\n    max-height: 65px;\n}\n\n\n.tb-markdown-view .tb-widget-container > .tb-widget.tb-has-timewindow .tb-table-widget mat-toolbar {\n    height: 100px;\n    max-height: 100px;\n}\n\n.main-layout .header {\n    height: 60px;\n    margin: 4px;\n} \n\n.main-layout .header .mat-icon.title-icon {\n    width: 40px;\n    height: 40px;\n}\n\n.main-layout .header .title {\n    font-size: 18px;\n    font-weight: 500;\n    color: #28232D;\n}\n\n.main-layout .header .subtitle {\n    font-size: 13px;\n    font-weight: normal;\n    color: #757575;\n}\n\n\n/******/\n.main-layout .header {\n    height: 100px;\n} \n\n.main-layout .header .mat-icon.title-icon {\n    width: 40px;\n    height: 40px;\n}\n\n.main-layout .header .title {\n    font-size: 18px;\n    font-weight: 500;\n    color: #28232D;\n}\n\n.main-layout .header .subtitle {\n    font-size: 13px;\n    font-weight: normal;\n    color: #757575;\n}\n\n.tb-markdown-view .params {\n    background-color: #FAFAFA;\n    border-radius: 4px;\n    padding: 16px;\n    margin-bottom: 20px;\n}\n\n.tb-markdown-view .param-title {\n    font-size: 12px;\n    font-weight: normal;\n    color: #757575;\n}\n\n.tb-markdown-view .param {\n    font-size: 12px;\n    font-weight: 500;\n    color: #212121;\n    line-height: 24px;\n    height: 24px;\n}\n\n.tb-markdown-view .param #battery-level {\n    width: 24px;\n    height: 24px;\n    line-height: 24px;\n    padding: 0 2px;\n    min-width: 28px;\n}\n"
+            },
+            "title" : "Markdown/HTML Card",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false,
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true,
+            "enableDataExport" : false,
+            "borderRadius" : "8px",
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "actions" : {
+              "elementClick" : [ {
+                "name" : "go-back",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "custom",
+                "customFunction" : "var params = widgetContext.stateController.getStateParams();\nparams['selectedLocation'] = null;\nwidgetContext.stateController.updateState(null, params);",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "de7ff100-f1d5-0f6b-bd9d-e4b0485583ad"
+              }, {
+                "name" : "Muralla",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboard",
+                "targetDashboardStateId" : "",
+                "setEntityId" : true,
+                "stateEntityParamName" : null,
+                "openNewBrowserTab" : false,
+                "targetDashboardId" : "89fa9960-6e7b-11f0-b66c-af0ec4b52e7b",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "fedd8d90-f9fd-7743-1686-03ded69220e8"
+              }, {
+                "name" : "Reforma75",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboard",
+                "targetDashboardStateId" : "",
+                "setEntityId" : true,
+                "stateEntityParamName" : null,
+                "openNewBrowserTab" : false,
+                "targetDashboardId" : "01eed9d0-a861-11f0-b059-8b346e2ee2ab",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "14256769-df21-b2d4-5b87-5aa76adea4ba"
+              }, {
+                "name" : "SedeCancun",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboard",
+                "targetDashboardStateId" : "",
+                "setEntityId" : true,
+                "stateEntityParamName" : null,
+                "openNewBrowserTab" : false,
+                "targetDashboardId" : "5477e610-aa1e-11f0-b059-8b346e2ee2ab",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "bfb40aa8-d950-f467-fb50-235101e27f55"
+              }, {
+                "name" : "RioConsulado715",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboard",
+                "targetDashboardStateId" : "",
+                "setEntityId" : true,
+                "stateEntityParamName" : null,
+                "openNewBrowserTab" : false,
+                "targetDashboardId" : "7ae84680-bb3c-11f0-bcc5-c97b74515061",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "96815dbc-8d70-211d-3776-1a767c34928d"
+              } ]
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "909dcc76-584b-a387-7d8d-7ece40cd7b1d"
+        },
+        "483cbdb1-f681-e44c-52fa-acb61f456d95" : {
+          "typeFullFqn" : "system.maps_v2.openstreetmap",
+          "type" : "latest",
+          "sizeX" : 8.5,
+          "sizeY" : 6,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "009350a8-efa9-228d-0fb8-f6d5a93f91b8",
+              "filterId" : "41c1ccb4-5141-37bc-4d03-f0623f370ebb",
+              "dataKeys" : [ {
+                "name" : "latitude",
+                "type" : "attribute",
+                "label" : "latitude",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.24754310019751335
+              }, {
+                "name" : "longitude",
+                "type" : "attribute",
+                "label" : "longitude",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.8807431830181147
+              }, {
+                "name" : "address",
+                "type" : "attribute",
+                "label" : "address",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.8024642557297569
+              }, {
+                "name" : "state",
+                "type" : "attribute",
+                "label" : "state",
+                "color" : "#ffc107",
+                "settings" : { },
+                "_hash" : 0.39509597849105704
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            }, {
+              "type" : "entity",
+              "entityAliasId" : "73d7c089-93b7-fa01-fddf-450dce737304",
+              "dataKeys" : [ {
+                "name" : "latitude",
+                "type" : "attribute",
+                "label" : "selectedLocation",
+                "color" : "#607d8b",
+                "settings" : { },
+                "_hash" : 0.9793510771143247,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "if (value) {\n    return true;\n} else {\n    return false;\n}"
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1755014872504,
+                  "endTimeMs" : 1755101272504
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#FFFFFF",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "provider" : "openstreet-map",
+              "gmApiKey" : "AIzaSyDoEx2kaGz3PxwbI9T7ccTSg5xjdw8Nw8Q",
+              "gmDefaultMapType" : "roadmap",
+              "mapProvider" : "CartoDB.Positron",
+              "useCustomProvider" : false,
+              "customProviderTileUrl" : "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+              "mapProviderHere" : "HERE.normalDay",
+              "credentials" : {
+                "useV3" : true,
+                "app_id" : "AhM6TzD9ThyK78CT3ptx",
+                "app_code" : "p6NPiITB3Vv0GMUFnkLOOg",
+                "apiKey" : "kVXykxAfZ6LS4EbCTO02soFVfjA7HoBzNVVH9u7nzoE"
+              },
+              "mapImageUrl" : "tb-image;/api/images/system/air_quality_monitoring_dashboard_widget_new_openstreetmap_map_image.svg",
+              "imageEntityAlias" : "",
+              "imageUrlAttribute" : "",
+              "tmApiKey" : "84d6d83e0e51e481e50454ccbe8986b",
+              "tmDefaultMapType" : "roadmap",
+              "latKeyName" : "latitude",
+              "lngKeyName" : "longitude",
+              "xPosKeyName" : "xPos",
+              "yPosKeyName" : "yPos",
+              "defaultZoomLevel" : null,
+              "defaultCenterPosition" : "0,0",
+              "disableScrollZooming" : false,
+              "disableDoubleClickZooming" : false,
+              "disableZoomControl" : false,
+              "fitMapBounds" : true,
+              "useDefaultCenterPosition" : false,
+              "mapPageSize" : 16384,
+              "markerOffsetX" : 0.5,
+              "markerOffsetY" : 1,
+              "draggableMarker" : false,
+              "showLabel" : true,
+              "useLabelFunction" : true,
+              "labelFunction" : "return (data[\"entityLabel\"] !== \"\" ? data[\"entityLabel\"] : data[\"entityName\"]);",
+              "showTooltip" : false,
+              "color" : "#fe7569",
+              "useColorFunction" : false,
+              "useMarkerImageFunction" : true,
+              "markerImageFunction" : "var selectedLocation = data['selectedLocation'] === true;\nvar modoSeleccionado = dsData.filter(function (data) { return data['selectedLocation'] === true; }).length > 0;\n\nvar stateColor;\nswitch (data.state) {\n    case 'normal':\n        stateColor = '#1F8B4D';\n        break;\n    case 'alarmed':\n        stateColor = '#E64A19';\n        break;\n    case 'inactive':\n        stateColor = '#800080';\n        break;\n}\n\nvar opacity = modoSeleccionado && !selectedLocation ? 0.4 : 1;\n\nvar svg = `<svg opacity=\"${opacity}\" width=\"100\" height=\"100\" viewBox=\"0 0 100 100\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"color: ${stateColor};\">\n    <circle cx=\"50\" cy=\"50\" r=\"45\" fill=\"currentColor\"/>\n    <g transform=\"translate(20, 20) scale(2.5)\">\n        <path fill=\"white\" d=\"M17.553 16.106a1 1 0 0 1 1.283.345l.058.102l2 4a1 1 0 0 1-.765 1.439L20 22H4a1 1 0 0 1-.945-1.328l.05-.12l2-4a1 1 0 0 1 1.836.788l-.047.107L5.618 20h12.764l-1.276-2.553a1 1 0 0 1 .447-1.341ZM12 2a7 7 0 0 1 7 7c0 2.382-1.289 4.317-2.623 5.69a15.721 15.721 0 0 1-2.418 2.008l-.373.246l-.332.209c-.052.031-.102.06-.149.09l-.257.148c-.528.3-1.168.3-1.696 0l-.257-.149l-.31-.189a17.017 17.017 0 0 1-.171-.109l-.373-.246a15.72 15.72 0 0 1-2.418-2.008C6.289 13.317 5 11.382 5 9a7 7 0 0 1 7-7Zm0 2a5 5 0 0 0-5 5c0 1.636.89 3.095 2.057 4.296a13.913 13.913 0 0 0 2.314 1.885l.34.217c.105.065.202.123.289.174l.29-.174l.339-.217a13.913 13.913 0 0 0 2.314-1.885C16.11 12.096 17 10.636 17 9a5 5 0 0 0-5-5Zm0 2a3 3 0 1 1 0 6a3 3 0 0 1 0-6Zm0 2a1 1 0 1 0 0 2a1 1 0 0 0 0-2Z\"/>\n    </g>\n</svg>`;\n\nvar svgUrl = 'data:image/svg+xml,' + encodeURIComponent(svg);\n\nreturn {\n    url: svgUrl,\n    size: 30\n}",
+              "markerImages" : [ ],
+              "showPolygon" : false,
+              "polygonKeyName" : "perimeter",
+              "editablePolygon" : false,
+              "showPolygonLabel" : false,
+              "usePolygonLabelFunction" : false,
+              "polygonLabel" : "${entityName}",
+              "polygonLabelFunction" : null,
+              "showPolygonTooltip" : false,
+              "showPolygonTooltipAction" : "click",
+              "autoClosePolygonTooltip" : true,
+              "usePolygonTooltipFunction" : false,
+              "polygonTooltipPattern" : "<b>${entityName}</b><br/><br/><b>TimeStamp:</b> ${ts:7}",
+              "polygonTooltipFunction" : null,
+              "polygonColor" : "#3388ff",
+              "polygonOpacity" : 0.2,
+              "usePolygonColorFunction" : false,
+              "polygonColorFunction" : null,
+              "polygonStrokeColor" : "#3388ff",
+              "polygonStrokeOpacity" : 1,
+              "polygonStrokeWeight" : 3,
+              "usePolygonStrokeColorFunction" : false,
+              "polygonStrokeColorFunction" : null,
+              "showCircle" : false,
+              "circleKeyName" : "perimeter",
+              "editableCircle" : false,
+              "showCircleLabel" : false,
+              "useCircleLabelFunction" : false,
+              "circleLabel" : "${entityName}",
+              "circleLabelFunction" : null,
+              "showCircleTooltip" : false,
+              "showCircleTooltipAction" : "click",
+              "autoCloseCircleTooltip" : true,
+              "useCircleTooltipFunction" : false,
+              "circleTooltipPattern" : "<b>${entityName}</b><br/><br/><b>TimeStamp:</b> ${ts:7}",
+              "circleTooltipFunction" : null,
+              "circleFillColor" : "#3388ff",
+              "circleFillColorOpacity" : 0.2,
+              "useCircleFillColorFunction" : false,
+              "circleFillColorFunction" : null,
+              "circleStrokeColor" : "#3388ff",
+              "circleStrokeOpacity" : 1,
+              "circleStrokeWeight" : 3,
+              "useCircleStrokeColorFunction" : false,
+              "circleStrokeColorFunction" : null,
+              "useClusterMarkers" : false,
+              "zoomOnClick" : true,
+              "maxZoom" : null,
+              "maxClusterRadius" : 80,
+              "animate" : true,
+              "spiderfyOnMaxZoom" : false,
+              "showCoverageOnHover" : true,
+              "chunkedLoading" : false,
+              "removeOutsideVisibleBounds" : true,
+              "useIconCreateFunction" : false,
+              "clusterMarkerFunction" : null
+            },
+            "title" : "OpenStreet Map",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "widgetStyle" : { },
+            "actions" : {
+              "markerClick" : [ {
+                "name" : "Selected Location",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "custom",
+                "customFunction" : "var params = widgetContext.stateController.getStateParams();\nvar selectedLocation = params['selectedLocation'];\n\nif (selectedLocation && selectedLocation.entityId.id === entityId.id) {\n    params['selectedLocation'] = null;\n} else {\n    params['selectedLocation'] = { entityId: entityId, entityName: entityName, entityLabel: entityLabel };\n}\n\nwidgetContext.stateController.updateState(null, params);",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "ffd39f9a-e196-9169-aa78-a4fad77212ac"
+              } ]
+            },
+            "displayTimewindow" : true,
+            "enableDataExport" : false,
+            "borderRadius" : "8px",
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "483cbdb1-f681-e44c-52fa-acb61f456d95"
+        },
+        "5c1e2132-9ad9-3a0b-3552-1a1201ceadbf" : {
+          "typeFullFqn" : "system.cards.entities_table",
+          "type" : "latest",
+          "sizeX" : 7.5,
+          "sizeY" : 6.5,
+          "config" : {
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 86400000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1755031545915,
+                  "endTimeMs" : 1755117945915
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 200
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "4px",
+            "settings" : {
+              "enableSearch" : true,
+              "enableSelectColumnDisplay" : true,
+              "enableStickyHeader" : true,
+              "enableStickyAction" : true,
+              "reserveSpaceForHiddenAction" : "true",
+              "displayEntityName" : false,
+              "displayEntityLabel" : false,
+              "displayEntityType" : false,
+              "displayPagination" : true,
+              "defaultPageSize" : 10,
+              "defaultSortOrder" : "name",
+              "useRowStyleFunction" : false,
+              "entitiesTitle" : "Inmuebles"
+            },
+            "title" : "Locations",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400,
+              "padding" : "5px 10px 5px 10px"
+            },
+            "useDashboardTimewindow" : false,
+            "showLegend" : false,
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "009350a8-efa9-228d-0fb8-f6d5a93f91b8",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "label",
+                "type" : "entityField",
+                "label" : "Nombre",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.6679072897599356,
+                "decimals" : 0,
+                "aggregationType" : null,
+                "units" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "address",
+                "type" : "attribute",
+                "label" : "Dirección",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.730253507650781,
+                "decimals" : 0,
+                "aggregationType" : null,
+                "units" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "state",
+                "type" : "attribute",
+                "label" : "Estado",
+                "color" : "#f44336",
+                "settings" : {
+                  "customTitle" : "",
+                  "columnWidth" : "0px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : true,
+                  "useCellContentFunctionOnExport" : true,
+                  "cellContentFunction" : "var state = value;\n\nvar stateSvg = getStateSvg(state);\nvar encodedStateSvg = encodeURIComponent(stateSvg);\nvar stateSvgUrl = 'data:image/svg+xml,' + encodedStateSvg;\nvar stateLabel = getStateLabel(state);\n\nreturn '<span>'+\n           '<img style=\"vertical-align: middle;\" class=\"mat-icon\" src=\"'+ stateSvgUrl +'\">' +\n           '<span style=\"vertical-align: middle; padding-left: 8px;\">'+ stateLabel +'</span>' +\n       '</span>';\n            \nfunction getStateSvg(state) {\n    switch (state) {\n        case 'alarmed':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#E64A19\"/>' +\n                   '</svg>';\n        case 'normal':            \n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#1F8B4D\"/>' +\n                   '</svg>';\n        case 'inactive':            \n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#6600cc\"/>' +\n                   '</svg>';\n        default:\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#AAAAAA\"/>' +\n                   '</svg>';\n    }\n}\n\nfunction getStateLabel(state) {\n    switch(state) {\n        case 'alarmed':\n            return 'Alarmado';\n        case 'normal':\n            return 'Normal';\n        case 'inactive':\n            return 'Inactivo';\n        default:\n            return state;\n    }\n}",
+                  "defaultColumnVisibility" : "visible",
+                  "columnSelectionToDisplay" : "enabled",
+                  "columnExportOption" : "onlyVisible",
+                  "disableSorting" : false
+                },
+                "_hash" : 0.36200251312615883,
+                "decimals" : 0,
+                "aggregationType" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "units" : null
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "displayTimewindow" : false,
+            "configMode" : "basic",
+            "actions" : {
+              "rowClick" : [ {
+                "name" : "Selected Location",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "custom",
+                "customFunction" : "var params = widgetContext.stateController.getStateParams();\nvar selectedLocation = params['selectedLocation'];\n\nif (selectedLocation && selectedLocation.entityId.id === entityId.id) {\n    params['selectedLocation'] = null;\n} else {\n    params['selectedLocation'] = { entityId: entityId, entityName: entityName, entityLabel: entityLabel };\n}\n\nwidgetContext.stateController.updateState(null, params);",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "b4a7058a-218c-1928-8bca-0f56f792cf8f"
+              } ]
+            },
+            "showTitleIcon" : false,
+            "titleIcon" : "list",
+            "iconColor" : null,
+            "titleFont" : {
+              "size" : 28,
+              "sizeUnit" : "px",
+              "family" : null,
+              "weight" : "bold",
+              "style" : null
+            },
+            "titleColor" : null,
+            "enableDataExport" : false,
+            "titleTooltip" : "",
+            "widgetStyle" : { },
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "5c1e2132-9ad9-3a0b-3552-1a1201ceadbf"
+        },
+        "6ee880cf-be8f-af82-a3f5-a20eab366d1b" : {
+          "typeFullFqn" : "system.cards.entities_table",
+          "type" : "latest",
+          "sizeX" : 7.5,
+          "sizeY" : 6.5,
+          "config" : {
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 86400000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1755044049169,
+                  "endTimeMs" : 1755130449169
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 200
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "4px",
+            "settings" : {
+              "enableSearch" : true,
+              "enableSelectColumnDisplay" : true,
+              "enableStickyHeader" : true,
+              "enableStickyAction" : true,
+              "reserveSpaceForHiddenAction" : "true",
+              "displayEntityName" : false,
+              "displayEntityLabel" : false,
+              "displayEntityType" : false,
+              "displayPagination" : true,
+              "defaultPageSize" : 10,
+              "defaultSortOrder" : "name",
+              "useRowStyleFunction" : false,
+              "entitiesTitle" : "Módulos"
+            },
+            "title" : "Dispositivos",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400,
+              "padding" : "5px 10px 5px 10px"
+            },
+            "useDashboardTimewindow" : false,
+            "showLegend" : false,
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "c7ec77ea-71c4-e7b9-793b-e34785955c5c",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "name",
+                "type" : "entityField",
+                "label" : "Nombre",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.3790413838242147,
+                "decimals" : 0
+              }, {
+                "name" : "state",
+                "type" : "attribute",
+                "label" : "Estado",
+                "color" : "#4caf50",
+                "settings" : {
+                  "customTitle" : "",
+                  "columnWidth" : "0px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : true,
+                  "useCellContentFunctionOnExport" : true,
+                  "cellContentFunction" : "var state = value;\n\nvar stateSvg = getStateSvg(state);\nvar encodedStateSvg = encodeURIComponent(stateSvg);\nvar stateSvgUrl = 'data:image/svg+xml,' + encodedStateSvg;\nvar stateLabel = getStateLabel(state);\n\nreturn '<span>'+\n           '<img style=\"vertical-align: middle;\" class=\"mat-icon\" src=\"'+ stateSvgUrl +'\">' +\n           '<span style=\"vertical-align: middle; padding-left: 8px;\">'+ stateLabel +'</span>' +\n       '</span>';\n            \nfunction getStateSvg(state) {\n    switch (state) {\n        case 'alarmed':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#E64A19\"/>' +\n                   '</svg>';\n        case 'normal':            \n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#1F8B4D\"/>' +\n                   '</svg>';\n        case 'inactive':            \n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#6600cc\"/>' +\n                   '</svg>';\n        default:\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#AAAAAA\"/>' +\n                   '</svg>';\n    }\n}\n\nfunction getStateLabel(state) {\n    switch(state) {\n        case 'alarmed':\n            return 'Alarmado';\n        case 'normal':\n            return 'Normal';\n        case 'inactive':\n            return 'Inactivo';\n        default:\n            return state;\n    }\n}",
+                  "defaultColumnVisibility" : "visible",
+                  "columnSelectionToDisplay" : "enabled",
+                  "columnExportOption" : "onlyVisible",
+                  "disableSorting" : false
+                },
+                "_hash" : 0.5831655904791146,
+                "decimals" : 0,
+                "aggregationType" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "displayTimewindow" : false,
+            "configMode" : "basic",
+            "actions" : { },
+            "showTitleIcon" : false,
+            "titleIcon" : "list",
+            "iconColor" : null,
+            "titleFont" : {
+              "size" : 28,
+              "sizeUnit" : "px",
+              "family" : null,
+              "weight" : "bold",
+              "style" : null
+            },
+            "titleColor" : null,
+            "enableDataExport" : false,
+            "titleTooltip" : "",
+            "widgetStyle" : { },
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "6ee880cf-be8f-af82-a3f5-a20eab366d1b"
+        },
+        "c09fce89-f96f-8d86-4037-6bd5f361d580" : {
+          "typeFullFqn" : "system.input_widgets.update_multiple_attributes",
+          "type" : "latest",
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "0a3a931e-8622-7a2d-c126-107fec6db434",
+              "dataKeys" : [ {
+                "name" : "mostrarUbicacionNormal",
+                "type" : "attribute",
+                "label" : "Normal",
+                "color" : "#2196f3",
+                "settings" : {
+                  "dataKeyHidden" : false,
+                  "dataKeyType" : "server",
+                  "dataKeyValueType" : "booleanSwitch",
+                  "required" : false,
+                  "isEditable" : "editable",
+                  "disabledOnDataKey" : "",
+                  "appearance" : "outline",
+                  "subscriptSizing" : "fixed",
+                  "slideToggleLabelPosition" : "after",
+                  "selectOptions" : [ ],
+                  "step" : 1,
+                  "minValue" : null,
+                  "maxValue" : null,
+                  "requiredErrorMessage" : "",
+                  "minValueErrorMessage" : "",
+                  "maxValueErrorMessage" : "",
+                  "invalidDateErrorMessage" : "",
+                  "invalidJsonErrorMessage" : "",
+                  "dialogTitle" : "",
+                  "saveButtonLabel" : "",
+                  "cancelButtonLabel" : "",
+                  "useCustomIcon" : true,
+                  "icon" : "",
+                  "customIcon" : "tb-image;/api/images/system/smart_supermarket_dashboard_widget_state_filter_custom_icon.svg",
+                  "useGetValueFunction" : true,
+                  "getValueFunctionBody" : "return !value || value === 'normal';",
+                  "useSetValueFunction" : true,
+                  "setValueFunctionBody" : "return value ? 'normal' : 'unset';"
+                },
+                "_hash" : 0.3753861147149159,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "mostrarUbicacionCritica",
+                "type" : "attribute",
+                "label" : "Crítico",
+                "color" : "#4caf50",
+                "settings" : {
+                  "dataKeyHidden" : false,
+                  "dataKeyType" : "server",
+                  "dataKeyValueType" : "booleanSwitch",
+                  "required" : false,
+                  "isEditable" : "editable",
+                  "disabledOnDataKey" : "",
+                  "appearance" : "outline",
+                  "subscriptSizing" : "fixed",
+                  "slideToggleLabelPosition" : "after",
+                  "selectOptions" : [ ],
+                  "step" : 1,
+                  "minValue" : null,
+                  "maxValue" : null,
+                  "requiredErrorMessage" : "",
+                  "minValueErrorMessage" : "",
+                  "maxValueErrorMessage" : "",
+                  "invalidDateErrorMessage" : "",
+                  "invalidJsonErrorMessage" : "",
+                  "dialogTitle" : "",
+                  "saveButtonLabel" : "",
+                  "cancelButtonLabel" : "",
+                  "useCustomIcon" : true,
+                  "icon" : "",
+                  "customIcon" : "tb-image;/api/images/system/smart_supermarket_dashboard_widget_state_filter_custom_icon_(2).svg",
+                  "useGetValueFunction" : true,
+                  "getValueFunctionBody" : "return !value || value === 'alarmed';",
+                  "useSetValueFunction" : true,
+                  "setValueFunctionBody" : "return value ? 'alarmed' : 'unset';"
+                },
+                "_hash" : 0.7383120444090553,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "mostrarUbicacionInactiva",
+                "type" : "attribute",
+                "label" : "Inactivo",
+                "color" : "#f44336",
+                "settings" : {
+                  "dataKeyHidden" : false,
+                  "dataKeyType" : "server",
+                  "dataKeyValueType" : "booleanSwitch",
+                  "required" : false,
+                  "isEditable" : "editable",
+                  "disabledOnDataKey" : "",
+                  "appearance" : "outline",
+                  "subscriptSizing" : "fixed",
+                  "slideToggleLabelPosition" : "after",
+                  "selectOptions" : [ ],
+                  "radioColor" : null,
+                  "radioColumns" : 1,
+                  "radioLabelPosition" : "after",
+                  "step" : 1,
+                  "minValue" : null,
+                  "maxValue" : null,
+                  "requiredErrorMessage" : "",
+                  "minValueErrorMessage" : "",
+                  "maxValueErrorMessage" : "",
+                  "invalidDateErrorMessage" : "",
+                  "invalidJsonErrorMessage" : "",
+                  "dialogTitle" : "",
+                  "saveButtonLabel" : "",
+                  "cancelButtonLabel" : "",
+                  "useCustomIcon" : true,
+                  "icon" : "",
+                  "customIcon" : "tb-image;/api/images/tenant/image.svg",
+                  "useGetValueFunction" : true,
+                  "getValueFunctionBody" : "return !value || value === 'inactive';",
+                  "useSetValueFunction" : true,
+                  "setValueFunctionBody" : "return value ? 'inactive' : 'unset';"
+                },
+                "_hash" : 0.6583546947563903,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1760033172767,
+                  "endTimeMs" : 1760119572767
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "widgetTitle" : "",
+              "showResultMessage" : false,
+              "showActionButtons" : false,
+              "updateAllValues" : false,
+              "saveButtonLabel" : "",
+              "resetButtonLabel" : "",
+              "showGroupTitle" : false,
+              "groupTitle" : "${entityName}",
+              "fieldsAlignment" : "row",
+              "fieldsInRow" : 6,
+              "rowGap" : 5,
+              "columnGap" : 10
+            },
+            "title" : "Update Multiple Attributes",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "enableDataExport" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : { },
+            "displayTimewindow" : true,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "c09fce89-f96f-8d86-4037-6bd5f361d580"
+        },
+        "713760ea-12e3-808a-dd8b-125a89fbdf4c" : {
+          "typeFullFqn" : "system.cards.markdown_card",
+          "type" : "latest",
+          "sizeX" : 5,
+          "sizeY" : 3.5,
+          "config" : {
+            "datasources" : [ ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1755014296802,
+                  "endTimeMs" : 1755100696802
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "useMarkdownTextFunction" : true,
+              "markdownTextPattern" : "### Markdown/HTML card\n - **Current entity**: ${entityName}.\n - **Current value**: ${Random}.",
+              "markdownTextFunction" : "return '<div class=\"main-layout\" style=\"width: 100%; height: 100%;\" fxLayout=\"column\">' +\n            '<h5 class=\"state-filter-title\">Filtro de estado</h5>' +\n            '<tb-dashboard-state fxFlex [ctx]=\"ctx\" stateId=\"filtro_estado\"></tb-dashboard-state>' +\n       '</div>';",
+              "applyDefaultMarkdownStyle" : true,
+              "markdownCss" : ".tb-markdown-view .tb-progress-cover, .tb-markdown-view .mat-drawer-container {\n    background-color: #fff;\n}\n.tb-markdown-view div, .tb-markdown-view p {\n    line-height: normal;\n}\n\n.tb-markdown-view > div {\n    padding: 0;\n}\n\n.tb-markdown-view table {\n    border: none;\n    border-radius: 0px;\n    overflow: auto;\n}\n\n.tb-markdown-view .mat-toolbar.mat-primary div {\n    color: var(--tb-primary-contrast-500);\n}\n\n.tb-markdown-view .tb-widget-container > .tb-widget {\n    border-radius: 0px;\n}\n\n.tb-markdown-view .tb-widget-container > .tb-widget .tb-table-widget mat-toolbar {\n    height: 65px;\n    max-height: 65px;\n}\n\n\n.tb-markdown-view .tb-widget-container > .tb-widget.tb-has-timewindow .tb-table-widget mat-toolbar {\n    height: 100px;\n    max-height: 100px;\n}\n\n.main-layout .header {\n    height: 60px;\n    margin: 4px;\n} \n\n.main-layout .header .mat-icon.title-icon {\n    width: 40px;\n    height: 40px;\n}\n\n.main-layout .header .title {\n    font-size: 18px;\n    font-weight: 500;\n    color: #28232D;\n}\n\n.main-layout .header .subtitle {\n    font-size: 13px;\n    font-weight: normal;\n    color: #757575;\n}\n\n\n/******/\n.main-layout .header {\n    height: 100px;\n} \n\n.main-layout .header .mat-icon.title-icon {\n    width: 40px;\n    height: 40px;\n}\n\n.main-layout .header .title {\n    font-size: 18px;\n    font-weight: 500;\n    color: #28232D;\n}\n\n.main-layout .header .subtitle {\n    font-size: 13px;\n    font-weight: normal;\n    color: #757575;\n}\n\n.tb-markdown-view .params {\n    background-color: #FAFAFA;\n    border-radius: 4px;\n    padding: 16px;\n    margin-bottom: 20px;\n}\n\n.tb-markdown-view .param-title {\n    font-size: 12px;\n    font-weight: normal;\n    color: #757575;\n}\n\n.tb-markdown-view .param {\n    font-size: 12px;\n    font-weight: 500;\n    color: #212121;\n    line-height: 24px;\n    height: 24px;\n}\n\n.tb-markdown-view .param #battery-level {\n    width: 24px;\n    height: 24px;\n    line-height: 24px;\n    padding: 0 2px;\n    min-width: 28px;\n}\n"
+            },
+            "title" : "Markdown/HTML Card",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false,
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true,
+            "enableDataExport" : false,
+            "borderRadius" : "8px",
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "actions" : {
+              "elementClick" : [ {
+                "name" : "go-back",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "custom",
+                "customFunction" : "var params = widgetContext.stateController.getStateParams();\nparams['selectedLocation'] = null;\nwidgetContext.stateController.updateState(null, params);",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "de7ff100-f1d5-0f6b-bd9d-e4b0485583ad"
+              }, {
+                "name" : "Sucursal1",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboard",
+                "targetDashboardStateId" : "default",
+                "setEntityId" : true,
+                "stateEntityParamName" : null,
+                "openNewBrowserTab" : false,
+                "targetDashboardId" : "da0d52d0-a39b-11f0-ba75-a5c61422f7fd",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "fedd8d90-f9fd-7743-1686-03ded69220e8"
+              } ]
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "713760ea-12e3-808a-dd8b-125a89fbdf4c"
+        }
+      },
+      "states" : {
+        "default" : {
+          "name" : "Monitoreo",
+          "root" : true,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "6e6ba862-cd07-d6d7-ddaa-dbbed4231a0b" : {
+                  "sizeX" : 17,
+                  "sizeY" : 12,
+                  "row" : 0,
+                  "col" : 0
+                },
+                "909dcc76-584b-a387-7d8d-7ece40cd7b1d" : {
+                  "sizeX" : 7,
+                  "sizeY" : 9,
+                  "row" : 3,
+                  "col" : 17
+                },
+                "713760ea-12e3-808a-dd8b-125a89fbdf4c" : {
+                  "sizeX" : 7,
+                  "sizeY" : 3,
+                  "row" : 0,
+                  "col" : 17
+                }
+              },
+              "gridSettings" : {
+                "layoutType" : "default",
+                "backgroundColor" : "#eeeeee",
+                "columns" : 24,
+                "margin" : 10,
+                "outerMargin" : true,
+                "backgroundSizeMode" : "100%",
+                "minColumns" : 24,
+                "viewFormat" : "grid",
+                "autoFillHeight" : true,
+                "rowHeight" : 70,
+                "backgroundImageUrl" : null,
+                "mobileAutoFillHeight" : false,
+                "mobileRowHeight" : 70
+              }
+            }
+          }
+        },
+        "global_map" : {
+          "name" : "global map",
+          "root" : false,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "483cbdb1-f681-e44c-52fa-acb61f456d95" : {
+                  "sizeX" : 24,
+                  "sizeY" : 13,
+                  "row" : 0,
+                  "col" : 0
+                }
+              },
+              "gridSettings" : {
+                "layoutType" : "default",
+                "backgroundColor" : "#FFFFFF",
+                "columns" : 24,
+                "margin" : 0,
+                "outerMargin" : true,
+                "backgroundSizeMode" : "100%",
+                "minColumns" : 24,
+                "viewFormat" : "grid",
+                "autoFillHeight" : true,
+                "rowHeight" : 70,
+                "backgroundImageUrl" : null,
+                "mobileAutoFillHeight" : true,
+                "mobileRowHeight" : 70
+              }
+            }
+          }
+        },
+        "locations_list" : {
+          "name" : "locations list",
+          "root" : false,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "5c1e2132-9ad9-3a0b-3552-1a1201ceadbf" : {
+                  "sizeX" : 24,
+                  "sizeY" : 9,
+                  "row" : 0,
+                  "col" : 0
+                }
+              },
+              "gridSettings" : {
+                "layoutType" : "default",
+                "backgroundColor" : "#FFFFFF",
+                "columns" : 24,
+                "margin" : 0,
+                "outerMargin" : true,
+                "backgroundSizeMode" : "100%",
+                "minColumns" : 24,
+                "viewFormat" : "grid",
+                "autoFillHeight" : true,
+                "rowHeight" : 70,
+                "backgroundImageUrl" : null,
+                "mobileAutoFillHeight" : false,
+                "mobileRowHeight" : 70
+              }
+            }
+          }
+        },
+        "location_devices" : {
+          "name" : "location devices",
+          "root" : false,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "6ee880cf-be8f-af82-a3f5-a20eab366d1b" : {
+                  "sizeX" : 24,
+                  "sizeY" : 8,
+                  "row" : 0,
+                  "col" : 0
+                }
+              },
+              "gridSettings" : {
+                "layoutType" : "default",
+                "backgroundColor" : "#FFFFFF",
+                "columns" : 24,
+                "margin" : 0,
+                "outerMargin" : true,
+                "backgroundSizeMode" : "100%",
+                "minColumns" : 24,
+                "viewFormat" : "grid",
+                "autoFillHeight" : true,
+                "rowHeight" : 70,
+                "backgroundImageUrl" : null,
+                "mobileAutoFillHeight" : false,
+                "mobileRowHeight" : 70
+              }
+            }
+          }
+        },
+        "filtro_estado" : {
+          "name" : "filtro estado",
+          "root" : false,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "c09fce89-f96f-8d86-4037-6bd5f361d580" : {
+                  "sizeX" : 24,
+                  "sizeY" : 2,
+                  "row" : 0,
+                  "col" : 0
+                }
+              },
+              "gridSettings" : {
+                "backgroundColor" : "#FFFFFF",
+                "columns" : 24,
+                "margin" : 0,
+                "outerMargin" : true,
+                "backgroundSizeMode" : "100%",
+                "autoFillHeight" : false,
+                "backgroundImageUrl" : null,
+                "mobileAutoFillHeight" : false,
+                "mobileRowHeight" : 70,
+                "layoutType" : "default"
+              }
+            }
+          }
+        }
+      },
+      "entityAliases" : {
+        "009350a8-efa9-228d-0fb8-f6d5a93f91b8" : {
+          "id" : "009350a8-efa9-228d-0fb8-f6d5a93f91b8",
+          "alias" : "Locations",
+          "filter" : {
+            "type" : "entityGroup",
+            "resolveMultiple" : true,
+            "groupStateEntity" : false,
+            "stateEntityParamName" : null,
+            "defaultStateGroupType" : null,
+            "defaultStateEntityGroup" : null,
+            "groupType" : "ASSET",
+            "entityGroup" : "5670e7e0-6e7e-11f0-b66c-af0ec4b52e7b"
+          }
+        },
+        "73d7c089-93b7-fa01-fddf-450dce737304" : {
+          "id" : "73d7c089-93b7-fa01-fddf-450dce737304",
+          "alias" : "SelectedLocation",
+          "filter" : {
+            "type" : "stateEntity",
+            "resolveMultiple" : false,
+            "stateEntityParamName" : "selectedLocation",
+            "defaultStateEntity" : null
+          }
+        },
+        "c7ec77ea-71c4-e7b9-793b-e34785955c5c" : {
+          "id" : "c7ec77ea-71c4-e7b9-793b-e34785955c5c",
+          "alias" : "Location Assets",
+          "filter" : {
+            "type" : "assetSearchQuery",
+            "resolveMultiple" : true,
+            "rootStateEntity" : true,
+            "stateEntityParamName" : "selectedLocation",
+            "defaultStateEntity" : null,
+            "rootEntity" : null,
+            "direction" : "FROM",
+            "maxLevel" : 1,
+            "fetchLastLevelOnly" : false,
+            "relationType" : "Contains",
+            "assetTypes" : [ "default" ]
+          }
+        },
+        "0a3a931e-8622-7a2d-c126-107fec6db434" : {
+          "id" : "0a3a931e-8622-7a2d-c126-107fec6db434",
+          "alias" : "UsuarioActual",
+          "filter" : {
+            "type" : "singleEntity",
+            "resolveMultiple" : false,
+            "singleEntity" : {
+              "entityType" : "CURRENT_USER",
+              "id" : "13814000-1dd2-11b2-8080-808080808080"
+            }
+          }
+        }
+      },
+      "filters" : {
+        "41c1ccb4-5141-37bc-4d03-f0623f370ebb" : {
+          "id" : "41c1ccb4-5141-37bc-4d03-f0623f370ebb",
+          "filter" : "Ubicaciones filtro",
+          "keyFilters" : [ {
+            "key" : {
+              "type" : "ATTRIBUTE",
+              "key" : "state"
+            },
+            "valueType" : "STRING",
+            "predicates" : [ {
+              "keyFilterPredicate" : {
+                "operation" : "OR",
+                "predicates" : [ {
+                  "keyFilterPredicate" : {
+                    "operation" : "EQUAL",
+                    "value" : {
+                      "defaultValue" : "normal",
+                      "dynamicValue" : {
+                        "sourceType" : "CURRENT_USER",
+                        "sourceAttribute" : "mostrarUbicacionNormal",
+                        "inherit" : false
+                      }
+                    },
+                    "ignoreCase" : false,
+                    "type" : "STRING"
+                  },
+                  "userInfo" : {
+                    "editable" : true,
+                    "label" : "",
+                    "autogeneratedLabel" : true,
+                    "order" : 0
+                  }
+                }, {
+                  "keyFilterPredicate" : {
+                    "operation" : "EQUAL",
+                    "value" : {
+                      "defaultValue" : "alarmed",
+                      "dynamicValue" : {
+                        "sourceType" : "CURRENT_USER",
+                        "sourceAttribute" : "mostrarUbicacionCritica",
+                        "inherit" : false
+                      }
+                    },
+                    "ignoreCase" : false,
+                    "type" : "STRING"
+                  },
+                  "userInfo" : {
+                    "editable" : true,
+                    "label" : "",
+                    "autogeneratedLabel" : true,
+                    "order" : 0
+                  }
+                }, {
+                  "keyFilterPredicate" : {
+                    "operation" : "EQUAL",
+                    "value" : {
+                      "defaultValue" : "inactive",
+                      "dynamicValue" : {
+                        "sourceType" : "CURRENT_USER",
+                        "sourceAttribute" : "mostrarUbicacionInactiva",
+                        "inherit" : false
+                      }
+                    },
+                    "ignoreCase" : false,
+                    "type" : "STRING"
+                  },
+                  "userInfo" : {
+                    "editable" : true,
+                    "label" : "",
+                    "autogeneratedLabel" : true,
+                    "order" : 0
+                  }
+                } ],
+                "type" : "COMPLEX"
+              },
+              "userInfo" : {
+                "editable" : true,
+                "label" : "",
+                "autogeneratedLabel" : true,
+                "order" : 0
+              }
+            } ]
+          } ],
+          "editable" : false
+        }
+      },
+      "timewindow" : {
+        "displayValue" : "",
+        "hideAggregation" : false,
+        "hideAggInterval" : false,
+        "hideTimezone" : false,
+        "selectedTab" : 0,
+        "realtime" : {
+          "realtimeType" : 0,
+          "interval" : 1000,
+          "timewindowMs" : 60000,
+          "quickInterval" : "CURRENT_DAY",
+          "hideInterval" : false,
+          "hideLastInterval" : false,
+          "hideQuickInterval" : false
+        },
+        "history" : {
+          "historyType" : 0,
+          "interval" : 1000,
+          "timewindowMs" : 60000,
+          "fixedTimewindow" : {
+            "startTimeMs" : 1755013640039,
+            "endTimeMs" : 1755100040039
+          },
+          "quickInterval" : "CURRENT_DAY",
+          "hideInterval" : false,
+          "hideLastInterval" : false,
+          "hideFixedInterval" : false,
+          "hideQuickInterval" : false
+        },
+        "aggregation" : {
+          "type" : "AVG",
+          "limit" : 25000
+        }
+      },
+      "settings" : {
+        "stateControllerId" : "entity",
+        "showTitle" : false,
+        "showDashboardsSelect" : true,
+        "showEntitiesSelect" : true,
+        "showDashboardTimewindow" : true,
+        "showDashboardExport" : true,
+        "toolbarAlwaysOpen" : true
+      }
+    },
+    "name" : "General",
+    "resources" : null,
+    "assignedCustomers" : null,
+    "customerId" : null,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "DASHBOARD",
+      "id" : "64bb94a0-a86a-11f0-b059-8b346e2ee2ab"
+    },
+    "ownerId" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

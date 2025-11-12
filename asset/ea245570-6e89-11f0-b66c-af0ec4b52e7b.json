@@ -1,0 +1,182 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "assetProfileId" : {
+      "entityType" : "ASSET_PROFILE",
+      "id" : "fa6931e0-6d98-11f0-b5cd-673555e50245"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "ea245570-6e89-11f0-b66c-af0ec4b52e7b"
+    },
+    "label" : null,
+    "name" : "Módulo 4",
+    "ownerId" : null,
+    "type" : "default"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "ea245570-6e89-11f0-b66c-af0ec4b52e7b"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "bb8a4b80-6dbb-11f0-b5cd-673555e50245"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 1097
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "ea245570-6e89-11f0-b66c-af0ec4b52e7b"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "d56f6d10-6dab-11f0-b5cd-673555e50245"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 1098
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "ea245570-6e89-11f0-b66c-af0ec4b52e7b"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "fa86aa50-6dab-11f0-b5cd-673555e50245"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 1100
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "ea245570-6e89-11f0-b66c-af0ec4b52e7b"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "022ac4a0-6db9-11f0-b5cd-673555e50245"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 1094
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "ea245570-6e89-11f0-b66c-af0ec4b52e7b"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "099222e0-6dac-11f0-b5cd-673555e50245"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 1099
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "ea245570-6e89-11f0-b66c-af0ec4b52e7b"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "2c222d20-6db9-11f0-b5cd-673555e50245"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 1095
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "ea245570-6e89-11f0-b66c-af0ec4b52e7b"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "58b8f8a0-6db9-11f0-b5cd-673555e50245"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 1096
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "5807db90-6e7e-11f0-b66c-af0ec4b52e7b"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "ea245570-6e89-11f0-b66c-af0ec4b52e7b"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 11535
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "[\"Planta emergencia\"]",
+      "key" : "contains",
+      "lastUpdateTs" : 1754020191527,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"0vJClbHBBuWQnek10Pq4\":false,\"JEbwPqzne1GiSyIDBE9r\":false,\"kKbVHk2oIXJfHlZP1TZ0\":false,\"k09zdyF0d5iTMKdnPPDs\":false,\"PSAJ0y7UzNtD4km34Usk\":false,\"S4OlFeusug0kEEdpF1H8\":false,\"booLuEk2iXCVN0YJdMsD\":false}",
+      "key" : "devices",
+      "lastUpdateTs" : 1754080783735,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "latitude",
+      "lastUpdateTs" : 1758571785592,
+      "longValue" : null,
+      "strValue" : "0.19"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "longitude",
+      "lastUpdateTs" : 1758571773295,
+      "longValue" : null,
+      "strValue" : "0.35"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "map",
+      "lastUpdateTs" : 1758587915723,
+      "longValue" : null,
+      "strValue" : "/api/images/tenant/Captura de pantalla 2025-09-22 a la(s) 6.33.55 p.m.png"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "state",
+      "lastUpdateTs" : 1754020160596,
+      "longValue" : null,
+      "strValue" : "normal"
+    } ]
+  },
+  "calculatedFields" : [ ]
+}

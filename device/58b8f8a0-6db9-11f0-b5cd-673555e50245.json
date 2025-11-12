@@ -1,0 +1,136 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "lastConnectedGateway" : "ebf3a4d0-6da5-11f0-b5cd-673555e50245"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "5099eda0-6e8b-11f0-b66c-af0ec4b52e7b"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "58b8f8a0-6db9-11f0-b5cd-673555e50245"
+    },
+    "label" : "Tablero GN2",
+    "name" : "CPM5100-5",
+    "ownerId" : null,
+    "softwareId" : null,
+    "type" : "UPS"
+  },
+  "credentials" : {
+    "credentialsId" : "kKbVHk2oIXJfHlZP1TZ0",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "ea245570-6e89-11f0-b66c-af0ec4b52e7b"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "58b8f8a0-6db9-11f0-b5cd-673555e50245"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 1096
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "ebf3a4d0-6da5-11f0-b5cd-673555e50245"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "58b8f8a0-6db9-11f0-b5cd-673555e50245"
+    },
+    "type" : "Created",
+    "typeGroup" : "COMMON",
+    "version" : 1013
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : true,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1762735436594,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1762707734976,
+      "longValue" : 1762707734976,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1762966868622,
+      "longValue" : 1762966867203,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastConnectTime",
+      "lastUpdateTs" : 1762949932482,
+      "longValue" : 1762949932482,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastDisconnectTime",
+      "lastUpdateTs" : 1762949932329,
+      "longValue" : 1762949932329,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "latitude",
+      "lastUpdateTs" : 1758588151904,
+      "longValue" : null,
+      "strValue" : "0.406"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "longitude",
+      "lastUpdateTs" : 1758588136732,
+      "longValue" : null,
+      "strValue" : "0.61"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "state",
+      "lastUpdateTs" : 1754021735844,
+      "longValue" : null,
+      "strValue" : "normal"
+    } ],
+    "SHARED_SCOPE" : [ ]
+  },
+  "calculatedFields" : [ ]
+}

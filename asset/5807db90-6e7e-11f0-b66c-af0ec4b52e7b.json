@@ -1,0 +1,114 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "assetProfileId" : {
+      "entityType" : "ASSET_PROFILE",
+      "id" : "fa6931e0-6d98-11f0-b5cd-673555e50245"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "5807db90-6e7e-11f0-b66c-af0ec4b52e7b"
+    },
+    "label" : "Muralla",
+    "name" : "Muralla",
+    "ownerId" : null,
+    "type" : "default"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "5807db90-6e7e-11f0-b66c-af0ec4b52e7b"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "936837d0-6e82-11f0-b66c-af0ec4b52e7b"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 11533
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "5807db90-6e7e-11f0-b66c-af0ec4b52e7b"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "ea245570-6e89-11f0-b66c-af0ec4b52e7b"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 11535
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "5807db90-6e7e-11f0-b66c-af0ec4b52e7b"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "10b20d70-6e87-11f0-b66c-af0ec4b52e7b"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 11534
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "5807db90-6e7e-11f0-b66c-af0ec4b52e7b"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "1e954ae0-98d2-11f0-99f5-17002bfd3f21"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 11532
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "address",
+      "lastUpdateTs" : 1760388647687,
+      "longValue" : null,
+      "strValue" : "KILOMETRO 6.5 DE LA CARRETERA AMEALCO-GALINDO"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "latitude",
+      "lastUpdateTs" : 1754015062753,
+      "longValue" : null,
+      "strValue" : "20.39050"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "longitude",
+      "lastUpdateTs" : 1754015075578,
+      "longValue" : null,
+      "strValue" : "-100.09602"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "state",
+      "lastUpdateTs" : 1754014959479,
+      "longValue" : null,
+      "strValue" : "normal"
+    } ]
+  },
+  "calculatedFields" : [ ]
+}

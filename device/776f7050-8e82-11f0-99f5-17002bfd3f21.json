@@ -1,0 +1,136 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "lastConnectedGateway" : "ebf3a4d0-6da5-11f0-b5cd-673555e50245"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "c2516f10-9814-11f0-99f5-17002bfd3f21"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "776f7050-8e82-11f0-99f5-17002bfd3f21"
+    },
+    "label" : "Chiller 4",
+    "name" : "CHILLER-10",
+    "ownerId" : null,
+    "softwareId" : null,
+    "type" : "Chiller"
+  },
+  "credentials" : {
+    "credentialsId" : "lZ1pKmRjXyFotnj31JkI",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "ebf3a4d0-6da5-11f0-b5cd-673555e50245"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "776f7050-8e82-11f0-99f5-17002bfd3f21"
+    },
+    "type" : "Created",
+    "typeGroup" : "COMMON",
+    "version" : 6837
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "1e954ae0-98d2-11f0-99f5-17002bfd3f21"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "776f7050-8e82-11f0-99f5-17002bfd3f21"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 6946
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : true,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1762670622839,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1762651214670,
+      "longValue" : 1762651214670,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1762966874624,
+      "longValue" : 1762966874456,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastConnectTime",
+      "lastUpdateTs" : 1762670622838,
+      "longValue" : 1762670622838,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastDisconnectTime",
+      "lastUpdateTs" : 1762650592956,
+      "longValue" : 1762650592956,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "latitude",
+      "lastUpdateTs" : 1758671357101,
+      "longValue" : null,
+      "strValue" : "0.485"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "longitude",
+      "lastUpdateTs" : 1758671371874,
+      "longValue" : null,
+      "strValue" : "0.18"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "state",
+      "lastUpdateTs" : 1758669636295,
+      "longValue" : null,
+      "strValue" : "normal"
+    } ],
+    "SHARED_SCOPE" : [ ]
+  },
+  "calculatedFields" : [ ]
+}
